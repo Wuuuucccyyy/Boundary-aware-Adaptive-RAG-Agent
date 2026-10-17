@@ -1,0 +1,968 @@
+[
+  {
+    "id": "dev-01",
+    "split": "dev",
+    "category": "single",
+    "query": "年假申请流程是什么？",
+    "required_tasks": [
+      "leave"
+    ],
+    "acceptable_documents": {
+      "leave": [
+        "hr-leave"
+      ]
+    },
+    "acceptable_sources": {
+      "leave": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "dev-02",
+    "split": "dev",
+    "category": "single",
+    "query": "员工门户密码忘了怎么办？",
+    "required_tasks": [
+      "password"
+    ],
+    "acceptable_documents": {
+      "password": [
+        "it-password"
+      ]
+    },
+    "acceptable_sources": {
+      "password": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "dev-03",
+    "split": "dev",
+    "category": "cross",
+    "query": "培训资格政策和培训费用报销怎么规定？",
+    "required_tasks": [
+      "training_policy",
+      "training_claim"
+    ],
+    "acceptable_documents": {
+      "training_policy": [
+        "hr-training_policy"
+      ],
+      "training_claim": [
+        "finance-training_claim"
+      ]
+    },
+    "acceptable_sources": {
+      "training_policy": [
+        "hr"
+      ],
+      "training_claim": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "dev-04",
+    "split": "dev",
+    "category": "cross",
+    "query": "离职申请流程和离职权限停用流程是什么？",
+    "required_tasks": [
+      "offboarding_policy",
+      "offboarding_account"
+    ],
+    "acceptable_documents": {
+      "offboarding_policy": [
+        "hr-offboarding_policy"
+      ],
+      "offboarding_account": [
+        "it-offboarding_account"
+      ]
+    },
+    "acceptable_sources": {
+      "offboarding_policy": [
+        "hr"
+      ],
+      "offboarding_account": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "dev-05",
+    "split": "dev",
+    "category": "confusing",
+    "query": "员工期权的模拟扣缴规则是什么？",
+    "required_tasks": [
+      "option_tax"
+    ],
+    "acceptable_documents": {
+      "option_tax": [
+        "finance-option_tax"
+      ]
+    },
+    "acceptable_sources": {
+      "option_tax": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "dev-06",
+    "split": "dev",
+    "category": "confusing",
+    "query": "报销系统账号开通需要哪些操作？",
+    "required_tasks": [
+      "portal_access"
+    ],
+    "acceptable_documents": {
+      "portal_access": [
+        "it-portal_access"
+      ]
+    },
+    "acceptable_sources": {
+      "portal_access": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "dev-07",
+    "split": "dev",
+    "category": "unanswerable",
+    "query": "今年的火星人口是多少？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "dev-08",
+    "split": "dev",
+    "category": "unanswerable",
+    "query": "最新外汇汇率是多少？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-01",
+    "split": "test",
+    "category": "single",
+    "query": "年假有几天，怎么申请年假？",
+    "required_tasks": [
+      "leave"
+    ],
+    "acceptable_documents": {
+      "leave": [
+        "hr-leave"
+      ]
+    },
+    "acceptable_sources": {
+      "leave": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-02",
+    "split": "test",
+    "category": "single",
+    "query": "研发员工奖金资格和绩效系数政策是什么？",
+    "required_tasks": [
+      "bonus_policy"
+    ],
+    "acceptable_documents": {
+      "bonus_policy": [
+        "hr-bonus_policy"
+      ]
+    },
+    "acceptable_sources": {
+      "bonus_policy": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-03",
+    "split": "test",
+    "category": "single",
+    "query": "员工期权授予条件和归属期是什么？",
+    "required_tasks": [
+      "option_eligibility"
+    ],
+    "acceptable_documents": {
+      "option_eligibility": [
+        "hr-option_eligibility"
+      ]
+    },
+    "acceptable_sources": {
+      "option_eligibility": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-04",
+    "split": "test",
+    "category": "single",
+    "query": "出差机票报销要哪些凭证？",
+    "required_tasks": [
+      "travel_claim"
+    ],
+    "acceptable_documents": {
+      "travel_claim": [
+        "finance-travel_claim"
+      ]
+    },
+    "acceptable_sources": {
+      "travel_claim": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-05",
+    "split": "test",
+    "category": "single",
+    "query": "VPN连接失败如何排查？",
+    "required_tasks": [
+      "vpn"
+    ],
+    "acceptable_documents": {
+      "vpn": [
+        "it-vpn"
+      ]
+    },
+    "acceptable_sources": {
+      "vpn": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-06",
+    "split": "test",
+    "category": "single",
+    "query": "忘记员工门户密码如何重置？",
+    "required_tasks": [
+      "password"
+    ],
+    "acceptable_documents": {
+      "password": [
+        "it-password"
+      ]
+    },
+    "acceptable_sources": {
+      "password": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-07",
+    "split": "test",
+    "category": "single",
+    "query": "电脑设备补贴资格是什么？",
+    "required_tasks": [
+      "equipment_policy"
+    ],
+    "acceptable_documents": {
+      "equipment_policy": [
+        "hr-equipment_policy"
+      ]
+    },
+    "acceptable_sources": {
+      "equipment_policy": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-08",
+    "split": "test",
+    "category": "single",
+    "query": "培训费用报销额度是多少？",
+    "required_tasks": [
+      "training_claim"
+    ],
+    "acceptable_documents": {
+      "training_claim": [
+        "finance-training_claim"
+      ]
+    },
+    "acceptable_sources": {
+      "training_claim": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-09",
+    "split": "test",
+    "category": "single",
+    "query": "技术支持服务台联系邮箱是什么？",
+    "required_tasks": [
+      "support_contact"
+    ],
+    "acceptable_documents": {
+      "support_contact": [
+        "it-support_contact",
+        "hr-support_contact"
+      ]
+    },
+    "acceptable_sources": {
+      "support_contact": [
+        "hr",
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-10",
+    "split": "test",
+    "category": "single",
+    "query": "入职后每年能歇几天带薪假？",
+    "required_tasks": [
+      "leave"
+    ],
+    "acceptable_documents": {
+      "leave": [
+        "hr-leave"
+      ]
+    },
+    "acceptable_sources": {
+      "leave": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-11",
+    "split": "test",
+    "category": "cross",
+    "query": "员工期权授予资格和期权税务规则是什么？",
+    "required_tasks": [
+      "option_eligibility",
+      "option_tax"
+    ],
+    "acceptable_documents": {
+      "option_eligibility": [
+        "hr-option_eligibility"
+      ],
+      "option_tax": [
+        "finance-option_tax"
+      ]
+    },
+    "acceptable_sources": {
+      "option_eligibility": [
+        "hr"
+      ],
+      "option_tax": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-12",
+    "split": "test",
+    "category": "cross",
+    "query": "研发员工奖金政策如何计算，奖金预算如何计算？",
+    "required_tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "acceptable_documents": {
+      "bonus_policy": [
+        "hr-bonus_policy"
+      ],
+      "bonus_budget": [
+        "finance-bonus_budget"
+      ]
+    },
+    "acceptable_sources": {
+      "bonus_policy": [
+        "hr"
+      ],
+      "bonus_budget": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-13",
+    "split": "test",
+    "category": "cross",
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "required_tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "acceptable_documents": {
+      "travel_policy": [
+        "hr-travel_policy"
+      ],
+      "travel_claim": [
+        "finance-travel_claim"
+      ]
+    },
+    "acceptable_sources": {
+      "travel_policy": [
+        "hr"
+      ],
+      "travel_claim": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-14",
+    "split": "test",
+    "category": "cross",
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "required_tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "acceptable_documents": {
+      "equipment_policy": [
+        "hr-equipment_policy"
+      ],
+      "equipment_claim": [
+        "finance-equipment_claim"
+      ]
+    },
+    "acceptable_sources": {
+      "equipment_policy": [
+        "hr"
+      ],
+      "equipment_claim": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-15",
+    "split": "test",
+    "category": "cross",
+    "query": "离职通知交接流程是什么，离职账号何时停用？",
+    "required_tasks": [
+      "offboarding_policy",
+      "offboarding_account"
+    ],
+    "acceptable_documents": {
+      "offboarding_policy": [
+        "hr-offboarding_policy"
+      ],
+      "offboarding_account": [
+        "it-offboarding_account"
+      ]
+    },
+    "acceptable_sources": {
+      "offboarding_policy": [
+        "hr"
+      ],
+      "offboarding_account": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-16",
+    "split": "test",
+    "category": "cross",
+    "query": "培训报名审批条件是什么，培训报销额度是多少？",
+    "required_tasks": [
+      "training_policy",
+      "training_claim"
+    ],
+    "acceptable_documents": {
+      "training_policy": [
+        "hr-training_policy"
+      ],
+      "training_claim": [
+        "finance-training_claim"
+      ]
+    },
+    "acceptable_sources": {
+      "training_policy": [
+        "hr"
+      ],
+      "training_claim": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-17",
+    "split": "test",
+    "category": "cross",
+    "query": "差旅报销要哪些凭证，报销系统权限如何开通？",
+    "required_tasks": [
+      "travel_claim",
+      "portal_access"
+    ],
+    "acceptable_documents": {
+      "travel_claim": [
+        "finance-travel_claim"
+      ],
+      "portal_access": [
+        "it-portal_access"
+      ]
+    },
+    "acceptable_sources": {
+      "travel_claim": [
+        "finance"
+      ],
+      "portal_access": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-18",
+    "split": "test",
+    "category": "cross",
+    "query": "电脑补贴资格、电脑资产入账和电脑加密配置分别怎么处理？",
+    "required_tasks": [
+      "equipment_policy",
+      "equipment_claim",
+      "equipment_setup"
+    ],
+    "acceptable_documents": {
+      "equipment_policy": [
+        "hr-equipment_policy"
+      ],
+      "equipment_claim": [
+        "finance-equipment_claim"
+      ],
+      "equipment_setup": [
+        "it-equipment_setup"
+      ]
+    },
+    "acceptable_sources": {
+      "equipment_policy": [
+        "hr"
+      ],
+      "equipment_claim": [
+        "finance"
+      ],
+      "equipment_setup": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-19",
+    "split": "test",
+    "category": "cross",
+    "query": "期权归属条件是什么，税务怎么算？",
+    "required_tasks": [
+      "option_eligibility",
+      "option_tax"
+    ],
+    "acceptable_documents": {
+      "option_eligibility": [
+        "hr-option_eligibility"
+      ],
+      "option_tax": [
+        "finance-option_tax"
+      ]
+    },
+    "acceptable_sources": {
+      "option_eligibility": [
+        "hr"
+      ],
+      "option_tax": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-20",
+    "split": "test",
+    "category": "cross",
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "required_tasks": [
+      "offboarding_policy",
+      "offboarding_account"
+    ],
+    "acceptable_documents": {
+      "offboarding_policy": [
+        "hr-offboarding_policy"
+      ],
+      "offboarding_account": [
+        "it-offboarding_account"
+      ]
+    },
+    "acceptable_sources": {
+      "offboarding_policy": [
+        "hr"
+      ],
+      "offboarding_account": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-21",
+    "split": "test",
+    "category": "confusing",
+    "query": "员工期权税务怎么算？",
+    "required_tasks": [
+      "option_tax"
+    ],
+    "acceptable_documents": {
+      "option_tax": [
+        "finance-option_tax"
+      ]
+    },
+    "acceptable_sources": {
+      "option_tax": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-22",
+    "split": "test",
+    "category": "confusing",
+    "query": "研发人员奖金预算如何计算？",
+    "required_tasks": [
+      "bonus_budget",
+      "bonus_policy"
+    ],
+    "acceptable_documents": {
+      "bonus_budget": [
+        "finance-bonus_budget"
+      ],
+      "bonus_policy": [
+        "hr-bonus_policy"
+      ]
+    },
+    "acceptable_sources": {
+      "bonus_budget": [
+        "finance"
+      ],
+      "bonus_policy": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-23",
+    "split": "test",
+    "category": "confusing",
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "required_tasks": [
+      "portal_access"
+    ],
+    "acceptable_documents": {
+      "portal_access": [
+        "it-portal_access"
+      ]
+    },
+    "acceptable_sources": {
+      "portal_access": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-24",
+    "split": "test",
+    "category": "confusing",
+    "query": "员工电脑需要什么加密配置？",
+    "required_tasks": [
+      "equipment_setup"
+    ],
+    "acceptable_documents": {
+      "equipment_setup": [
+        "it-equipment_setup"
+      ]
+    },
+    "acceptable_sources": {
+      "equipment_setup": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-25",
+    "split": "test",
+    "category": "confusing",
+    "query": "员工离职后账号权限什么时候停用？",
+    "required_tasks": [
+      "offboarding_account"
+    ],
+    "acceptable_documents": {
+      "offboarding_account": [
+        "it-offboarding_account"
+      ]
+    },
+    "acceptable_sources": {
+      "offboarding_account": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-26",
+    "split": "test",
+    "category": "confusing",
+    "query": "员工培训费用报销额度上限？",
+    "required_tasks": [
+      "training_claim"
+    ],
+    "acceptable_documents": {
+      "training_claim": [
+        "finance-training_claim"
+      ]
+    },
+    "acceptable_sources": {
+      "training_claim": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-27",
+    "split": "test",
+    "category": "confusing",
+    "query": "员工年假期间，年假有几天？",
+    "required_tasks": [
+      "leave"
+    ],
+    "acceptable_documents": {
+      "leave": [
+        "hr-leave"
+      ]
+    },
+    "acceptable_sources": {
+      "leave": [
+        "hr"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-28",
+    "split": "test",
+    "category": "confusing",
+    "query": "奖金系统里的奖金预提成本口径是什么？",
+    "required_tasks": [
+      "bonus_budget"
+    ],
+    "acceptable_documents": {
+      "bonus_budget": [
+        "finance-bonus_budget"
+      ]
+    },
+    "acceptable_sources": {
+      "bonus_budget": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-29",
+    "split": "test",
+    "category": "confusing",
+    "query": "财务发票抬头和税号是什么？",
+    "required_tasks": [
+      "invoice"
+    ],
+    "acceptable_documents": {
+      "invoice": [
+        "finance-invoice"
+      ]
+    },
+    "acceptable_sources": {
+      "invoice": [
+        "finance"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-30",
+    "split": "test",
+    "category": "confusing",
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "required_tasks": [
+      "portal_access"
+    ],
+    "acceptable_documents": {
+      "portal_access": [
+        "it-portal_access"
+      ]
+    },
+    "acceptable_sources": {
+      "portal_access": [
+        "it"
+      ]
+    },
+    "fully_answerable": true
+  },
+  {
+    "id": "test-31",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "明天上海天气如何？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-32",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "公司股票明天涨多少？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-33",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "员工张三本月实际工资是多少？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-34",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "德国2027年个人所得税最新税率是多少？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-35",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "奖金系统数据库的管理员密钥是什么？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-36",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "客户合同违约赔偿应如何计算？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-37",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "公司的季度营业收入准确数值是多少？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-38",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "你能替我批准这笔贷款吗？",
+    "required_tasks": [],
+    "acceptable_documents": {},
+    "acceptable_sources": {},
+    "fully_answerable": false
+  },
+  {
+    "id": "test-39",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "期权税务规则是什么，明天股价是多少？",
+    "required_tasks": [
+      "option_tax",
+      "unknown:future_price"
+    ],
+    "acceptable_documents": {
+      "option_tax": [
+        "finance-option_tax"
+      ],
+      "unknown:future_price": []
+    },
+    "acceptable_sources": {
+      "option_tax": [
+        "finance"
+      ],
+      "unknown:future_price": []
+    },
+    "fully_answerable": false
+  },
+  {
+    "id": "test-40",
+    "split": "test",
+    "category": "unanswerable",
+    "query": "年假天数是多少，张三账户余额是多少？",
+    "required_tasks": [
+      "leave",
+      "unknown:balance"
+    ],
+    "acceptable_documents": {
+      "leave": [
+        "hr-leave"
+      ],
+      "unknown:balance": []
+    },
+    "acceptable_sources": {
+      "leave": [
+        "hr"
+      ],
+      "unknown:balance": []
+    },
+    "fully_answerable": false
+  }
+]

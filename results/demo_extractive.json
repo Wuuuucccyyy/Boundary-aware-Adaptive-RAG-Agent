@@ -1,0 +1,311 @@
+{
+  "query": "员工期权的授予资格是什么，期权税务怎么算？",
+  "method": "dynamic",
+  "backend": "extractive",
+  "requested_backend": "extractive",
+  "corpus_sha256": "8147c1618691f4705e46d8c73b661b7d320946729a6b83d23cc8a25da2e5763b",
+  "config": {
+    "top_k": 2,
+    "positive_top_k": 1,
+    "max_rounds": 3,
+    "max_retrieval_calls": 9,
+    "max_module_calls": 24,
+    "max_work_tokens": 40000,
+    "max_llm_tokens": 8000,
+    "max_output_tokens": 800,
+    "timeout_seconds": 45.0,
+    "max_seconds": 90.0,
+    "boundary_penalty": 0.55
+  },
+  "tasks": [
+    "option_eligibility",
+    "option_tax"
+  ],
+  "answer": "期权授予资格和归属条件：示例期权授予对象为入职满12个月的正式员工，授予需薪酬委员会批准，归属期为4年。 [hr-option_eligibility]\n期权税务公式和计算依据：仅在本合成案例中，期权税基为行权价差乘股数，模拟扣缴额为税基乘20%；这不是任何地区的真实税法。 [finance-option_tax]",
+  "sufficient": true,
+  "evidence": {
+    "supports": {
+      "option_eligibility": [
+        {
+          "doc_id": "hr-option_eligibility",
+          "source": "hr",
+          "quote": "示例期权授予对象为入职满12个月的正式员工，授予需薪酬委员会批准，归属期为4年。",
+          "version": "2026-10-01"
+        }
+      ],
+      "option_tax": [
+        {
+          "doc_id": "finance-option_tax",
+          "source": "finance",
+          "quote": "仅在本合成案例中，期权税基为行权价差乘股数，模拟扣缴额为税基乘20%；这不是任何地区的真实税法。",
+          "version": "2026-10-01"
+        }
+      ]
+    },
+    "missing": [],
+    "sufficient": true
+  },
+  "selected_sources": [
+    "hr",
+    "finance"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "missing_before": [
+        "option_eligibility",
+        "option_tax"
+      ],
+      "search_query": "员工期权的授予资格是什么，期权税务怎么算？",
+      "selected": [
+        "hr",
+        "finance"
+      ],
+      "decisions": [
+        {
+          "source": "hr",
+          "profile_version": "2026-10-01",
+          "positive": 0.398489,
+          "score": 0.364471,
+          "applicable": [
+            "option_eligibility"
+          ],
+          "conflicts": [
+            "option_tax"
+          ],
+          "uncertain": [],
+          "static_hits": [],
+          "evidence_refs": {
+            "option_eligibility": [
+              "hr-option_eligibility"
+            ]
+          },
+          "selected": true,
+          "reason": "当前缺口可支持=['option_eligibility']；版本内不支持=['option_tax']；未核实=[]；得分=0.364471；选中以补足证据或探索未知。"
+        },
+        {
+          "source": "finance",
+          "profile_version": "2026-10-01",
+          "positive": 0.381914,
+          "score": 0.35867,
+          "applicable": [
+            "option_tax"
+          ],
+          "conflicts": [
+            "option_eligibility"
+          ],
+          "uncertain": [],
+          "static_hits": [],
+          "evidence_refs": {
+            "option_tax": [
+              "finance-option_tax"
+            ]
+          },
+          "selected": true,
+          "reason": "当前缺口可支持=['option_tax']；版本内不支持=['option_eligibility']；未核实=[]；得分=0.35867；选中以补足证据或探索未知。"
+        },
+        {
+          "source": "it",
+          "profile_version": "2026-10-01",
+          "positive": 0.152459,
+          "score": -0.496639,
+          "applicable": [],
+          "conflicts": [
+            "option_eligibility",
+            "option_tax"
+          ],
+          "uncertain": [],
+          "static_hits": [],
+          "evidence_refs": {},
+          "selected": false,
+          "reason": "当前缺口可支持=[]；版本内不支持=['option_eligibility', 'option_tax']；未核实=[]；得分=-0.496639；本轮新增覆盖不足，保留候选。"
+        }
+      ],
+      "retrievals": [
+        {
+          "source": "hr",
+          "hits": [
+            {
+              "document": {
+                "id": "hr-option_eligibility",
+                "source": "hr",
+                "title": "员工股票期权授予条件",
+                "version": "2026-10-01",
+                "text": "示例期权授予对象为入职满12个月的正式员工，授予需薪酬委员会批准，归属期为4年。",
+                "claims": [
+                  {
+                    "task": "option_eligibility",
+                    "quote": "示例期权授予对象为入职满12个月的正式员工，授予需薪酬委员会批准，归属期为4年。"
+                  }
+                ]
+              },
+              "score": 23.616438
+            },
+            {
+              "document": {
+                "id": "hr-tax_notice",
+                "source": "hr",
+                "title": "员工奖金期权税务说明",
+                "text": "员工奖金与期权可能涉及税务。本员工手册不提供税务计算规则，请咨询财务。",
+                "version": "2026-10-01",
+                "claims": []
+              },
+              "score": 21.988236
+            }
+          ]
+        },
+        {
+          "source": "finance",
+          "hits": [
+            {
+              "document": {
+                "id": "finance-option_tax",
+                "source": "finance",
+                "title": "员工期权模拟税务规则",
+                "version": "2026-10-01",
+                "text": "仅在本合成案例中，期权税基为行权价差乘股数，模拟扣缴额为税基乘20%；这不是任何地区的真实税法。",
+                "claims": [
+                  {
+                    "task": "option_tax",
+                    "quote": "仅在本合成案例中，期权税基为行权价差乘股数，模拟扣缴额为税基乘20%；这不是任何地区的真实税法。"
+                  }
+                ]
+              },
+              "score": 21.576539
+            },
+            {
+              "document": {
+                "id": "finance-leave_notice",
+                "source": "finance",
+                "title": "员工年假期间费用说明",
+                "text": "财务账目可记录年假期间的费用，但不规定年假天数或休假申请流程。",
+                "version": "2026-10-01",
+                "claims": []
+              },
+              "score": 5.406986
+            }
+          ]
+        }
+      ],
+      "evidence_check": {
+        "supports": {
+          "option_eligibility": [
+            {
+              "doc_id": "hr-option_eligibility",
+              "source": "hr",
+              "quote": "示例期权授予对象为入职满12个月的正式员工，授予需薪酬委员会批准，归属期为4年。",
+              "version": "2026-10-01"
+            }
+          ],
+          "option_tax": [
+            {
+              "doc_id": "finance-option_tax",
+              "source": "finance",
+              "quote": "仅在本合成案例中，期权税基为行权价差乘股数，模拟扣缴额为税基乘20%；这不是任何地区的真实税法。",
+              "version": "2026-10-01"
+            }
+          ]
+        },
+        "missing": [],
+        "sufficient": true
+      }
+    }
+  ],
+  "stop_reason": "sufficient_evidence",
+  "generation_error": null,
+  "metrics": {
+    "processed_token_proxy": 4132,
+    "api_prompt_tokens": 0,
+    "api_completion_tokens": 0,
+    "api_total_tokens": 0,
+    "api_calls": 0,
+    "module_calls": 6,
+    "retrieval_calls": 2,
+    "elapsed_ms": 4.374199997982942,
+    "by_stage": {
+      "decomposition": {
+        "calls": 1,
+        "elapsed_ms": 2.4813000054564327,
+        "token_proxy": 957
+      },
+      "evidence_check": {
+        "calls": 1,
+        "elapsed_ms": 0.009499999578110874,
+        "token_proxy": 495
+      },
+      "generation": {
+        "calls": 1,
+        "elapsed_ms": 0.012599994079209864,
+        "token_proxy": 220
+      },
+      "retrieval": {
+        "calls": 2,
+        "elapsed_ms": 0.367900007404387,
+        "token_proxy": 407
+      },
+      "routing": {
+        "calls": 1,
+        "elapsed_ms": 0.6834999949205667,
+        "token_proxy": 2053
+      }
+    },
+    "api_usage_complete": true,
+    "api_total_tokens_known": 0
+  },
+  "events": [
+    {
+      "stage": "decomposition",
+      "elapsed_ms": 2.4813000054564327,
+      "input_token_proxy": 948,
+      "output_token_proxy": 9,
+      "api_calls": 0,
+      "api_prompt_tokens": 0,
+      "api_completion_tokens": 0
+    },
+    {
+      "stage": "routing",
+      "elapsed_ms": 0.6834999949205667,
+      "input_token_proxy": 1739,
+      "output_token_proxy": 314,
+      "api_calls": 0,
+      "api_prompt_tokens": 0,
+      "api_completion_tokens": 0
+    },
+    {
+      "stage": "retrieval",
+      "elapsed_ms": 0.23040000814944506,
+      "input_token_proxy": 25,
+      "output_token_proxy": 173,
+      "api_calls": 0,
+      "api_prompt_tokens": 0,
+      "api_completion_tokens": 0
+    },
+    {
+      "stage": "retrieval",
+      "elapsed_ms": 0.13749999925494194,
+      "input_token_proxy": 26,
+      "output_token_proxy": 183,
+      "api_calls": 0,
+      "api_prompt_tokens": 0,
+      "api_completion_tokens": 0
+    },
+    {
+      "stage": "evidence_check",
+      "elapsed_ms": 0.009499999578110874,
+      "input_token_proxy": 369,
+      "output_token_proxy": 126,
+      "api_calls": 0,
+      "api_prompt_tokens": 0,
+      "api_completion_tokens": 0
+    },
+    {
+      "stage": "generation",
+      "elapsed_ms": 0.012599994079209864,
+      "input_token_proxy": 126,
+      "output_token_proxy": 94,
+      "api_calls": 0,
+      "api_prompt_tokens": 0,
+      "api_completion_tokens": 0
+    }
+  ]
+}

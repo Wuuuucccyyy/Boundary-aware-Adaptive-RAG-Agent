@@ -1,0 +1,201 @@
+[
+  {
+    "id": "hr",
+    "version": "2026-10-01",
+    "updated_at": "2026-10-01",
+    "positive": "人力资源员工手册：员工奖金绩效、期权福利、年假、出差、培训、远程办公、电脑补贴、离职制度和申请。",
+    "examples": [
+      "员工奖金政策如何计算",
+      "员工期权授予条件是什么",
+      "年假申请有几天",
+      "培训和出差怎么申请"
+    ],
+    "supports": {
+      "leave": [
+        "hr-leave"
+      ],
+      "bonus_policy": [
+        "hr-bonus_policy"
+      ],
+      "option_eligibility": [
+        "hr-option_eligibility"
+      ],
+      "travel_policy": [
+        "hr-travel_policy"
+      ],
+      "equipment_policy": [
+        "hr-equipment_policy"
+      ],
+      "offboarding_policy": [
+        "hr-offboarding_policy"
+      ],
+      "training_policy": [
+        "hr-training_policy"
+      ],
+      "support_contact": [
+        "hr-support_contact"
+      ]
+    },
+    "unsupported": {
+      "bonus_budget": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "option_tax": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "travel_claim": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "portal_access": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "vpn": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "password": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "equipment_claim": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "equipment_setup": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "offboarding_account": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "invoice": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "training_claim": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。"
+    },
+    "fixed_negative_patterns": [
+      "税",
+      "预算",
+      "入账",
+      "报销",
+      "登录",
+      "配置"
+    ],
+    "boundary_basis": [
+      "hr-leave",
+      "hr-bonus_policy",
+      "hr-option_eligibility",
+      "hr-travel_policy",
+      "hr-equipment_policy",
+      "hr-offboarding_policy",
+      "hr-training_policy",
+      "hr-support_contact",
+      "hr-tax_notice",
+      "hr-equipment_notice"
+    ]
+  },
+  {
+    "id": "finance",
+    "version": "2026-10-01",
+    "updated_at": "2026-10-01",
+    "positive": "财务：员工奖金预算、期权税务、差旅报销、培训费用、电脑资产、发票及财务报销系统的业务流程。",
+    "examples": [
+      "奖金预算如何计算",
+      "期权税务怎么算",
+      "报销系统提交哪些凭证",
+      "发票如何开具"
+    ],
+    "supports": {
+      "bonus_budget": [
+        "finance-bonus_budget"
+      ],
+      "option_tax": [
+        "finance-option_tax"
+      ],
+      "travel_claim": [
+        "finance-travel_claim"
+      ],
+      "equipment_claim": [
+        "finance-equipment_claim"
+      ],
+      "invoice": [
+        "finance-invoice"
+      ],
+      "training_claim": [
+        "finance-training_claim"
+      ]
+    },
+    "unsupported": {
+      "leave": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "bonus_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "option_eligibility": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "travel_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "portal_access": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "vpn": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "password": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "equipment_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "equipment_setup": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "offboarding_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "offboarding_account": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "training_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "support_contact": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。"
+    },
+    "fixed_negative_patterns": [
+      "资格",
+      "授予",
+      "密码",
+      "登录",
+      "权限",
+      "配置"
+    ],
+    "boundary_basis": [
+      "finance-bonus_budget",
+      "finance-option_tax",
+      "finance-travel_claim",
+      "finance-equipment_claim",
+      "finance-invoice",
+      "finance-training_claim",
+      "finance-access_notice",
+      "finance-leave_notice"
+    ]
+  },
+  {
+    "id": "it",
+    "version": "2026-10-01",
+    "updated_at": "2026-10-01",
+    "positive": "技术支持：员工门户、奖金系统、财务报销系统、VPN远程连接、账号权限、电脑配置、离职账号和服务台。",
+    "examples": [
+      "报销系统登录失败怎么办",
+      "VPN连接失败如何排查",
+      "电脑怎么配置",
+      "离职账号何时停用"
+    ],
+    "supports": {
+      "portal_access": [
+        "it-portal_access"
+      ],
+      "vpn": [
+        "it-vpn"
+      ],
+      "password": [
+        "it-password"
+      ],
+      "equipment_setup": [
+        "it-equipment_setup"
+      ],
+      "offboarding_account": [
+        "it-offboarding_account"
+      ],
+      "support_contact": [
+        "it-support_contact"
+      ]
+    },
+    "unsupported": {
+      "leave": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "bonus_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "bonus_budget": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "option_eligibility": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "option_tax": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "travel_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "travel_claim": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "equipment_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "equipment_claim": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "offboarding_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "invoice": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "training_policy": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。",
+      "training_claim": "已核查此合成快照，无支持该任务的事实；不代表该部门永久无能力。"
+    },
+    "fixed_negative_patterns": [
+      "预算",
+      "税",
+      "补贴",
+      "报销额度",
+      "资格"
+    ],
+    "boundary_basis": [
+      "it-portal_access",
+      "it-vpn",
+      "it-password",
+      "it-equipment_setup",
+      "it-offboarding_account",
+      "it-support_contact",
+      "it-bonus_notice"
+    ]
+  }
+]

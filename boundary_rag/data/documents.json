@@ -1,0 +1,302 @@
+[
+  {
+    "id": "hr-leave",
+    "source": "hr",
+    "title": "员工年假政策",
+    "version": "2026-10-01",
+    "text": "示例公司的正式员工每年享有15天年假，提前3个工作日在员工门户申请。",
+    "claims": [
+      {
+        "task": "leave",
+        "quote": "示例公司的正式员工每年享有15天年假，提前3个工作日在员工门户申请。"
+      }
+    ]
+  },
+  {
+    "id": "hr-bonus_policy",
+    "source": "hr",
+    "title": "研发员工奖金政策",
+    "version": "2026-10-01",
+    "text": "示例公司的研发员工奖金为月基本工资乘绩效系数，绩效系数由HR确认，适用对象为已转正员工。",
+    "claims": [
+      {
+        "task": "bonus_policy",
+        "quote": "示例公司的研发员工奖金为月基本工资乘绩效系数，绩效系数由HR确认，适用对象为已转正员工。"
+      }
+    ]
+  },
+  {
+    "id": "finance-bonus_budget",
+    "source": "finance",
+    "title": "研发奖金预算计算",
+    "version": "2026-10-01",
+    "text": "奖金预算为HR核定奖金总额乘1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。",
+    "claims": [
+      {
+        "task": "bonus_budget",
+        "quote": "奖金预算为HR核定奖金总额乘1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。"
+      }
+    ]
+  },
+  {
+    "id": "hr-option_eligibility",
+    "source": "hr",
+    "title": "员工股票期权授予条件",
+    "version": "2026-10-01",
+    "text": "示例期权授予对象为入职满12个月的正式员工，授予需薪酬委员会批准，归属期为4年。",
+    "claims": [
+      {
+        "task": "option_eligibility",
+        "quote": "示例期权授予对象为入职满12个月的正式员工，授予需薪酬委员会批准，归属期为4年。"
+      }
+    ]
+  },
+  {
+    "id": "finance-option_tax",
+    "source": "finance",
+    "title": "员工期权模拟税务规则",
+    "version": "2026-10-01",
+    "text": "仅在本合成案例中，期权税基为行权价差乘股数，模拟扣缴额为税基乘20%；这不是任何地区的真实税法。",
+    "claims": [
+      {
+        "task": "option_tax",
+        "quote": "仅在本合成案例中，期权税基为行权价差乘股数，模拟扣缴额为税基乘20%；这不是任何地区的真实税法。"
+      }
+    ]
+  },
+  {
+    "id": "hr-travel_policy",
+    "source": "hr",
+    "title": "员工出差审批政策",
+    "version": "2026-10-01",
+    "text": "示例公司出差需直属经理批准，普通员工国内航班乘经济舱。",
+    "claims": [
+      {
+        "task": "travel_policy",
+        "quote": "示例公司出差需直属经理批准，普通员工国内航班乘经济舱。"
+      }
+    ]
+  },
+  {
+    "id": "finance-travel_claim",
+    "source": "finance",
+    "title": "差旅报销规则",
+    "version": "2026-10-01",
+    "text": "差旅报销应在返程后30天内提交电子发票、行程单和审批编号。",
+    "claims": [
+      {
+        "task": "travel_claim",
+        "quote": "差旅报销应在返程后30天内提交电子发票、行程单和审批编号。"
+      }
+    ]
+  },
+  {
+    "id": "it-portal_access",
+    "source": "it",
+    "title": "财务报销系统账号权限",
+    "version": "2026-10-01",
+    "text": "报销系统权限由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。",
+    "claims": [
+      {
+        "task": "portal_access",
+        "quote": "报销系统权限由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。"
+      }
+    ]
+  },
+  {
+    "id": "it-vpn",
+    "source": "it",
+    "title": "VPN连接故障排查",
+    "version": "2026-10-01",
+    "text": "VPN连接失败时先检查网络和多因素认证，再更新客户端；仍失败时附错误码提交IT工单。",
+    "claims": [
+      {
+        "task": "vpn",
+        "quote": "VPN连接失败时先检查网络和多因素认证，再更新客户端；仍失败时附错误码提交IT工单。"
+      }
+    ]
+  },
+  {
+    "id": "it-password",
+    "source": "it",
+    "title": "员工门户密码重置",
+    "version": "2026-10-01",
+    "text": "员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。",
+    "claims": [
+      {
+        "task": "password",
+        "quote": "员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。"
+      }
+    ]
+  },
+  {
+    "id": "hr-equipment_policy",
+    "source": "hr",
+    "title": "远程办公设备补贴政策",
+    "version": "2026-10-01",
+    "text": "完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。",
+    "claims": [
+      {
+        "task": "equipment_policy",
+        "quote": "完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。"
+      }
+    ]
+  },
+  {
+    "id": "finance-equipment_claim",
+    "source": "finance",
+    "title": "办公设备费用处理",
+    "version": "2026-10-01",
+    "text": "办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。",
+    "claims": [
+      {
+        "task": "equipment_claim",
+        "quote": "办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。"
+      }
+    ]
+  },
+  {
+    "id": "it-equipment_setup",
+    "source": "it",
+    "title": "办公电脑安全配置",
+    "version": "2026-10-01",
+    "text": "办公电脑需启用全盘加密、安装终端防护，并通过IT设备管理平台注册。",
+    "claims": [
+      {
+        "task": "equipment_setup",
+        "quote": "办公电脑需启用全盘加密、安装终端防护，并通过IT设备管理平台注册。"
+      }
+    ]
+  },
+  {
+    "id": "hr-offboarding_policy",
+    "source": "hr",
+    "title": "员工离职交接政策",
+    "version": "2026-10-01",
+    "text": "示例公司离职申请应提前30天提交，离职日前完成经理确认的交接清单。",
+    "claims": [
+      {
+        "task": "offboarding_policy",
+        "quote": "示例公司离职申请应提前30天提交，离职日前完成经理确认的交接清单。"
+      }
+    ]
+  },
+  {
+    "id": "it-offboarding_account",
+    "source": "it",
+    "title": "离职员工账号停用",
+    "version": "2026-10-01",
+    "text": "IT依据已批准的离职工单，在离职日18点停用员工账号并撤销远程访问权限。",
+    "claims": [
+      {
+        "task": "offboarding_account",
+        "quote": "IT依据已批准的离职工单，在离职日18点停用员工账号并撤销远程访问权限。"
+      }
+    ]
+  },
+  {
+    "id": "finance-invoice",
+    "source": "finance",
+    "title": "示例发票开具信息",
+    "version": "2026-10-01",
+    "text": "示例发票抬头为星河示例实验室，税号为DEMO-TAX-000，不对应真实企业。",
+    "claims": [
+      {
+        "task": "invoice",
+        "quote": "示例发票抬头为星河示例实验室，税号为DEMO-TAX-000，不对应真实企业。"
+      }
+    ]
+  },
+  {
+    "id": "hr-training_policy",
+    "source": "hr",
+    "title": "员工培训审批",
+    "version": "2026-10-01",
+    "text": "转正员工可申请与岗位相关的培训，须在报名之前获得经理批准。",
+    "claims": [
+      {
+        "task": "training_policy",
+        "quote": "转正员工可申请与岗位相关的培训，须在报名之前获得经理批准。"
+      }
+    ]
+  },
+  {
+    "id": "finance-training_claim",
+    "source": "finance",
+    "title": "培训费用报销",
+    "version": "2026-10-01",
+    "text": "已审批培训每人每年最多报销2000元，需课程凭证和发票。",
+    "claims": [
+      {
+        "task": "training_claim",
+        "quote": "已审批培训每人每年最多报销2000元，需课程凭证和发票。"
+      }
+    ]
+  },
+  {
+    "id": "it-support_contact",
+    "source": "it",
+    "title": "技术支持服务台",
+    "version": "2026-10-01",
+    "text": "技术支持服务台邮箱为helpdesk@example.invalid，工作时间为工作日9点至18点。",
+    "claims": [
+      {
+        "task": "support_contact",
+        "quote": "技术支持服务台邮箱为helpdesk@example.invalid，工作时间为工作日9点至18点。"
+      }
+    ]
+  },
+  {
+    "id": "hr-support_contact",
+    "source": "hr",
+    "title": "员工手册服务台联系方式",
+    "version": "2026-10-01",
+    "text": "技术支持服务台邮箱为helpdesk@example.invalid，工作时间为工作日9点至18点。",
+    "claims": [
+      {
+        "task": "support_contact",
+        "quote": "技术支持服务台邮箱为helpdesk@example.invalid，工作时间为工作日9点至18点。"
+      }
+    ]
+  },
+  {
+    "id": "hr-tax_notice",
+    "source": "hr",
+    "title": "员工奖金期权税务说明",
+    "text": "员工奖金与期权可能涉及税务。本员工手册不提供税务计算规则，请咨询财务。",
+    "version": "2026-10-01",
+    "claims": []
+  },
+  {
+    "id": "finance-access_notice",
+    "source": "finance",
+    "title": "财务报销系统登录说明",
+    "text": "财务审核报销单据，但不处理报销系统登录失败或权限开通，请联系IT。",
+    "version": "2026-10-01",
+    "claims": []
+  },
+  {
+    "id": "it-bonus_notice",
+    "source": "it",
+    "title": "研发奖金系统技术维护",
+    "text": "IT维护研发奖金系统的运行，但不制定员工奖金资格、绩效系数或奖金预算规则。",
+    "version": "2026-10-01",
+    "claims": []
+  },
+  {
+    "id": "hr-equipment_notice",
+    "source": "hr",
+    "title": "员工电脑设备申请入口",
+    "text": "员工门户提供电脑申请入口；电脑安装、设备加密和技术配置由IT负责。",
+    "version": "2026-10-01",
+    "claims": []
+  },
+  {
+    "id": "finance-leave_notice",
+    "source": "finance",
+    "title": "员工年假期间费用说明",
+    "text": "财务账目可记录年假期间的费用，但不规定年假天数或休假申请流程。",
+    "version": "2026-10-01",
+    "claims": []
+  }
+]

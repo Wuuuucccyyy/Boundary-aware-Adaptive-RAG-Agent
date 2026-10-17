@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boundary-aware-adaptive-rag"
+version = "0.1.0"
+description = "Auditable query-conditioned source routing with budgeted evidence retrieval"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+boundary-rag = "boundary_rag.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["boundary_rag*"]
+
+[tool.setuptools.package-data]
+boundary_rag = ["data/*.json"]
