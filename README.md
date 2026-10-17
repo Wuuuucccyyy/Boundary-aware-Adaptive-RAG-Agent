@@ -83,8 +83,11 @@ python scripts/pack_traces.py results/my_online
 
 阅读 [在线实验报告与失败分析](docs/EXPERIMENT_REPORT.md)。原始自动评分有已披露的格式及粒度偏差，需结合报告中的人工复核，不应直接解释为真实准确率。
 
+已完成的正式运行共320次在线问答、65,225个实际API tokens。动态方案平均1.975次检索，全库5.10次、正向2.025次、固定2.00次；四种方案约203–205个API tokens/题，本轮未证明动态方案显著节省模型tokens。内容复核由开发助手完成，并非独立人类盲审。
+
 ```bash
 python scripts/read_trace.py --id test-11 --method dynamic --repetition 0
+python scripts/verify_results.py results/online
 ```
 
 离线开发验证和必要测试：

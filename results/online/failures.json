@@ -1,0 +1,3019 @@
+[
+  {
+    "sample_id": "test-10",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-fixed-0.json"
+  },
+  {
+    "sample_id": "test-10",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-10",
+    "method": "all",
+    "repetition": 0,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-all-0.json"
+  },
+  {
+    "sample_id": "test-10",
+    "method": "positive",
+    "repetition": 0,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-positive-0.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "all",
+    "repetition": 0,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-all-0.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "positive",
+    "repetition": 0,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-positive-0.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-fixed-0.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：电子发票、行程单和审批编号[finance-travel_claim]。",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-fixed-0.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：\n\n1. 电子发票\n2. 行程单\n3. 审批编号\n\n[finance-travel_claim]",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "all",
+    "repetition": 0,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：电子发票、行程单和审批编号[finance-travel_claim]。",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-all-0.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "positive",
+    "repetition": 0,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：电子发票、行程单和审批编号[finance-travel_claim]。",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-positive-0.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "all",
+    "repetition": 0,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请[hr-leave]。  \n关于“员工年假期间”的具体安排，证据中未提供，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-all-0.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "positive",
+    "repetition": 0,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请[hr-leave]。\n\n关于“员工年假期间”的具体安排，缺少相关证据，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-positive-0.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请。[hr-leave]\n\n关于“员工年假期间”的具体天数，证据中未提供该子问题的信息，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-fixed-0.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请[hr-leave]。  \n关于“员工年假期间”的具体安排，缺少证据，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-fixed-0.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "all",
+    "repetition": 0,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-all-0.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "positive",
+    "repetition": 0,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-positive-0.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "positive",
+    "repetition": 0,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-positive-0.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，并同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-fixed-0.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "all",
+    "repetition": 0,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-all-0.json"
+  },
+  {
+    "sample_id": "test-05",
+    "method": "all",
+    "repetition": 0,
+    "query": "VPN连接失败如何排查？",
+    "answer": "根据已验证证据，VPN连接失败时按以下步骤排查：\n\n1. 先检查网络连接。\n2. 检查多因素认证。\n3. 更新客户端。\n4. 若仍失败，附错误码提交IT工单。[doc_id: it-vpn]",
+    "tasks": [
+      "vpn"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "vpn": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-05-all-0.json"
+  },
+  {
+    "sample_id": "test-05",
+    "method": "positive",
+    "repetition": 0,
+    "query": "VPN连接失败如何排查？",
+    "answer": "根据已验证证据，VPN连接失败可按以下步骤排查：\n\n1. 先检查网络连接；\n2. 检查多因素认证；\n3. 更新VPN客户端；\n4. 若仍失败，附错误码提交IT工单。[doc_id: it-vpn]",
+    "tasks": [
+      "vpn"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "vpn": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-05-positive-0.json"
+  },
+  {
+    "sample_id": "test-05",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "VPN连接失败如何排查？",
+    "answer": "根据已验证证据，VPN连接失败时按以下步骤排查：\n\n1. 先检查网络连接。\n2. 检查多因素认证是否正常。\n3. 更新VPN客户端。\n4. 若仍失败，附上错误码提交IT工单。[doc_id: it-vpn]",
+    "tasks": [
+      "vpn"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "vpn": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-05-fixed-0.json"
+  },
+  {
+    "sample_id": "test-05",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "VPN连接失败如何排查？",
+    "answer": "根据已验证证据，VPN连接失败时按以下步骤排查：\n\n1. 先检查网络连接。\n2. 检查多因素认证是否正常。\n3. 更新VPN客户端。\n4. 若仍失败，附上错误码提交IT工单。[doc_id: it-vpn]",
+    "tasks": [
+      "vpn"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "vpn": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-05-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-09",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "技术支持服务台联系邮箱是什么？",
+    "answer": "技术支持服务台联系邮箱是 helpdesk@example.invalid。[it-support_contact]",
+    "tasks": [
+      "support_contact"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "support_contact": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-09-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-09",
+    "method": "all",
+    "repetition": 0,
+    "query": "技术支持服务台联系邮箱是什么？",
+    "answer": "技术支持服务台联系邮箱是 helpdesk@example.invalid。[hr-support_contact][it-support_contact]",
+    "tasks": [
+      "support_contact"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "support_contact": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-09-all-0.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：\n\n- 由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-fixed-0.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：\n\n- 由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "all",
+    "repetition": 0,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：\n\n- 由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-all-0.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "positive",
+    "repetition": 0,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：\n\n- 由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-positive-0.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "all",
+    "repetition": 0,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-all-0.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "positive",
+    "repetition": 0,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.5,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-positive-0.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.5,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-fixed-0.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n1. 出差审批政策：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n\n2. 差旅报销所需发票/材料：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "all",
+    "repetition": 0,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n1. **出差审批政策**：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n\n2. **差旅报销所需发票/材料**：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-all-0.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "positive",
+    "repetition": 0,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n1. **出差审批政策**：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n\n2. **差旅报销所需发票/材料**：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-positive-0.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n1. **出差审批政策**：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n\n2. **差旅报销所需发票/材料**：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-fixed-0.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "positive",
+    "repetition": 0,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "根据您提供的信息，目前没有已验证的证据可以说明财务软件转圈或无法进入费用填写页面的原因。  \n\n缺少证据的子问题：  \n- 财务软件一直转圈  \n- 我进不了那个填费用的页面  \n\n因此，无法确定具体原因或提供处理建议。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-positive-0.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "fixed",
+    "repetition": 0,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "无法确定。当前没有已验证证据说明财务软件一直转圈或无法进入填费用页面的原因。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-fixed-0.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "无法确定。当前没有已验证证据说明财务软件一直转圈或无法进入填费用页面的原因。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "all",
+    "repetition": 0,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "无法确定。当前没有已验证证据说明财务软件一直转圈或无法进入填费用页面的原因。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-all-0.json"
+  },
+  {
+    "sample_id": "test-08",
+    "method": "all",
+    "repetition": 0,
+    "query": "培训费用报销额度是多少？",
+    "answer": "根据已验证证据，已审批培训每人每年最多报销2000元，需提供课程凭证和发票。[doc_id: finance-training_claim]",
+    "tasks": [
+      "training_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "training_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-08-all-0.json"
+  },
+  {
+    "sample_id": "test-08",
+    "method": "positive",
+    "repetition": 0,
+    "query": "培训费用报销额度是多少？",
+    "answer": "根据已验证证据，已审批培训每人每年最多报销2000元，需提供课程凭证和发票。[文档ID: finance-training_claim]",
+    "tasks": [
+      "training_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "training_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-08-positive-0.json"
+  },
+  {
+    "sample_id": "test-12",
+    "method": "all",
+    "repetition": 0,
+    "query": "研发员工奖金政策如何计算，奖金预算如何计算？",
+    "answer": "根据已验证证据：\n\n1. 研发员工奖金计算：月基本工资 × 绩效系数，绩效系数由HR确认，适用对象为已转正员工。[hr-bonus_policy]\n\n2. 奖金预算计算：HR核定奖金总额 × 1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。[finance-bonus_budget]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "bonus_policy": true,
+        "bonus_budget": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-12-all-0.json"
+  },
+  {
+    "sample_id": "test-12",
+    "method": "positive",
+    "repetition": 0,
+    "query": "研发员工奖金政策如何计算，奖金预算如何计算？",
+    "answer": "根据已验证证据：\n\n1. 研发员工奖金计算：月基本工资 × 绩效系数，绩效系数由HR确认，适用对象为已转正员工。[hr-bonus_policy]\n\n2. 奖金预算计算：HR核定奖金总额 × 1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。[finance-bonus_budget]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "bonus_policy": true,
+        "bonus_budget": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-12-positive-0.json"
+  },
+  {
+    "sample_id": "test-12",
+    "method": "dynamic",
+    "repetition": 0,
+    "query": "研发员工奖金政策如何计算，奖金预算如何计算？",
+    "answer": "根据已验证证据：\n\n1. 研发员工奖金计算：月基本工资 × 绩效系数，绩效系数由HR确认，适用对象为已转正员工。[hr-bonus_policy]\n\n2. 奖金预算计算：HR核定奖金总额 × 1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。[finance-bonus_budget]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "bonus_policy": true,
+        "bonus_budget": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-12-dynamic-0.json"
+  },
+  {
+    "sample_id": "test-10",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-10",
+    "method": "all",
+    "repetition": 1,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-all-1.json"
+  },
+  {
+    "sample_id": "test-10",
+    "method": "positive",
+    "repetition": 1,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-positive-1.json"
+  },
+  {
+    "sample_id": "test-10",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "入职后每年能歇几天带薪假？",
+    "answer": "无法确定。当前没有已验证证据说明入职后每年能歇几天带薪假。",
+    "tasks": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "missing": [
+      "unknown:入职后每年能歇几天带薪假"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-10-fixed-1.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "positive",
+    "repetition": 1,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-positive-1.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-fixed-1.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-14",
+    "method": "all",
+    "repetition": 1,
+    "query": "设备补贴资格是什么，电脑设备报销要什么发票？",
+    "answer": "根据已验证证据：\n\n- 设备补贴资格：完成试用期的远程办公员工可申请一次性设备补贴，额度上限为3000元。[hr-equipment_policy]\n- 电脑设备报销所需发票：办公设备报销需发票与审批记录；单件含税价达到5000元时登记为固定资产。[finance-equipment_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "equipment_policy",
+      "equipment_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "equipment_policy": true,
+        "equipment_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-14-all-1.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：电子发票、行程单和审批编号[finance-travel_claim]。",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "all",
+    "repetition": 1,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：电子发票、行程单和审批编号[finance-travel_claim]。",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-all-1.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "positive",
+    "repetition": 1,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：电子发票、行程单和审批编号[finance-travel_claim]。",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-positive-1.json"
+  },
+  {
+    "sample_id": "test-04",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "出差机票报销要哪些凭证？",
+    "answer": "根据已验证证据，出差机票报销需要提交以下凭证：电子发票、行程单和审批编号[finance-travel_claim]。",
+    "tasks": [
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "travel_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-04-fixed-1.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "positive",
+    "repetition": 1,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请[hr-leave]。  \n关于“员工年假期间”的具体安排，缺少证据，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-positive-1.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请[hr-leave]。  \n关于“员工年假期间”的具体安排，缺少证据，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-fixed-1.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请[hr-leave]。  \n关于“员工年假期间”的具体安排，缺少证据，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-27",
+    "method": "all",
+    "repetition": 1,
+    "query": "员工年假期间，年假有几天？",
+    "answer": "根据已验证证据，示例公司的正式员工每年享有15天年假，需提前3个工作日在员工门户申请[hr-leave]。  \n关于“员工年假期间”的具体安排，证据中未提供，无法确定。",
+    "tasks": [
+      "unknown:员工年假期间",
+      "leave"
+    ],
+    "missing": [
+      "unknown:员工年假期间"
+    ],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "leave": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-27-all-1.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "all",
+    "repetition": 1,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-all-1.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "positive",
+    "repetition": 1,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-positive-1.json"
+  },
+  {
+    "sample_id": "test-20",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "我要离开公司，谁处理交接和撤掉我的登录？",
+    "answer": "无法确定。当前没有已验证证据说明谁处理交接或撤掉登录。",
+    "tasks": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "missing": [
+      "unknown:我要离开公司",
+      "unknown:谁处理交接和撤掉我的登录"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_policy": false,
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-20-fixed-1.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，并同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-fixed-1.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "all",
+    "repetition": 1,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-all-1.json"
+  },
+  {
+    "sample_id": "test-25",
+    "method": "positive",
+    "repetition": 1,
+    "query": "员工离职后账号权限什么时候停用？",
+    "answer": "根据已验证证据，员工账号权限在离职日18点停用，并同时撤销远程访问权限。[doc_id: it-offboarding_account]",
+    "tasks": [
+      "offboarding_account"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "offboarding_account": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-25-positive-1.json"
+  },
+  {
+    "sample_id": "test-05",
+    "method": "positive",
+    "repetition": 1,
+    "query": "VPN连接失败如何排查？",
+    "answer": "根据已验证证据，VPN连接失败时按以下步骤排查：\n\n1. 先检查网络连接。\n2. 检查多因素认证。\n3. 更新客户端。\n4. 若仍失败，附错误码提交IT工单。[doc_id: it-vpn]",
+    "tasks": [
+      "vpn"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "vpn": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-05-positive-1.json"
+  },
+  {
+    "sample_id": "test-05",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "VPN连接失败如何排查？",
+    "answer": "根据已验证证据，VPN连接失败时按以下步骤排查：\n\n1. 先检查网络和多因素认证；\n2. 再更新客户端；\n3. 仍失败时附错误码提交IT工单。[doc_id: it-vpn]",
+    "tasks": [
+      "vpn"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "vpn": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-05-fixed-1.json"
+  },
+  {
+    "sample_id": "test-05",
+    "method": "all",
+    "repetition": 1,
+    "query": "VPN连接失败如何排查？",
+    "answer": "根据已验证证据，VPN连接失败时按以下步骤排查：\n\n1. 先检查网络连接。\n2. 检查多因素认证是否正常。\n3. 更新VPN客户端。\n4. 若仍失败，附上错误码提交IT工单。[doc_id: it-vpn]",
+    "tasks": [
+      "vpn"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "vpn": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-05-all-1.json"
+  },
+  {
+    "sample_id": "test-09",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "技术支持服务台联系邮箱是什么？",
+    "answer": "技术支持服务台联系邮箱是 helpdesk@example.invalid。[it-support_contact]",
+    "tasks": [
+      "support_contact"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "support_contact": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-09-fixed-1.json"
+  },
+  {
+    "sample_id": "test-09",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "技术支持服务台联系邮箱是什么？",
+    "answer": "技术支持服务台联系邮箱是 helpdesk@example.invalid。[it-support_contact]",
+    "tasks": [
+      "support_contact"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "support_contact": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-09-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：\n\n- 由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "all",
+    "repetition": 1,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-all-1.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "positive",
+    "repetition": 1,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：\n\n- 由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-positive-1.json"
+  },
+  {
+    "sample_id": "test-23",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "财务报销系统登录失败，账号权限找谁开通？",
+    "answer": "根据已验证证据，财务报销系统账号权限的开通流程如下：\n\n- 由部门负责人批准后提交IT工单，IT在2个工作日内开通，并启用多因素认证。[doc_id: it-portal_access]",
+    "tasks": [
+      "portal_access"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-23-fixed-1.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "all",
+    "repetition": 1,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-all-1.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "positive",
+    "repetition": 1,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.5,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-positive-1.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.5,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-fixed-1.json"
+  },
+  {
+    "sample_id": "test-06",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "忘记员工门户密码如何重置？",
+    "answer": "根据已验证证据，员工门户密码可在自助服务页重置，需通过已登记的多因素认证；验证失败时提交IT工单。[doc_id: it-password]",
+    "tasks": [
+      "password"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "password": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-06-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-40",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "年假天数是多少，张三账户余额是多少？",
+    "answer": "年假天数是15天[hr-leave]。  \n张三账户余额是多少：缺少证据，无法确定。",
+    "tasks": [
+      "leave",
+      "unknown:张三账户余额是多少"
+    ],
+    "missing": [
+      "unknown:张三账户余额是多少"
+    ],
+    "scores": {
+      "quality_proxy": 0.5,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "leave": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-40-fixed-1.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "all",
+    "repetition": 1,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n1. **出差审批政策**：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n\n2. **差旅报销所需发票/材料**：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-all-1.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "positive",
+    "repetition": 1,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n- 出差审批政策：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n- 差旅报销所需发票：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-positive-1.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n1. **出差审批政策**：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n\n2. **差旅报销所需发票/材料**：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-fixed-1.json"
+  },
+  {
+    "sample_id": "test-13",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "出差审批政策是什么，差旅报销需要哪些发票？",
+    "answer": "根据已验证证据：\n\n1. **出差审批政策**：示例公司出差需直属经理批准，普通员工国内航班乘经济舱。[hr-travel_policy]\n\n2. **差旅报销所需发票/材料**：应在返程后30天内提交电子发票、行程单和审批编号。[finance-travel_claim]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "travel_policy",
+      "travel_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "travel_policy": true,
+        "travel_claim": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-13-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "无法确定。当前没有已验证证据说明财务软件一直转圈或无法进入填费用页面的原因。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-fixed-1.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "无法确定。当前没有已验证证据说明财务软件一直转圈或无法进入填费用页面的原因。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "all",
+    "repetition": 1,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "无法确定。当前没有已验证证据说明财务软件一直转圈或无法进入填费用页面的原因。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-all-1.json"
+  },
+  {
+    "sample_id": "test-30",
+    "method": "positive",
+    "repetition": 1,
+    "query": "财务软件一直转圈，我进不了那个填费用的页面。",
+    "answer": "无法确定。当前没有已验证证据说明财务软件一直转圈或无法进入填费用页面的原因。",
+    "tasks": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "missing": [
+      "unknown:财务软件一直转圈",
+      "unknown:我进不了那个填费用的页面"
+    ],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "portal_access": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.6666666666666666,
+      "generation_success": true
+    },
+    "trace": "traces/test-30-positive-1.json"
+  },
+  {
+    "sample_id": "test-22",
+    "method": "all",
+    "repetition": 1,
+    "query": "研发人员奖金预算如何计算？",
+    "answer": "根据已验证证据，研发人员奖金预算的计算方式如下：\n\n1. **个人奖金计算**：研发员工奖金 = 月基本工资 × 绩效系数，绩效系数由HR确认，适用对象为已转正员工[hr-bonus_policy]。\n\n2. **预算总额计算**：奖金预算 = HR核定奖金总额 × 1.12，其中额外12%为示例雇主附加成本[finance-bonus_budget]。\n\n3. **月度预提**：每月按预计年度奖金的十二分之一预提[finance-bonus_budget]。\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "bonus_budget": true,
+        "bonus_policy": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.3333333333333333,
+      "generation_success": true
+    },
+    "trace": "traces/test-22-all-1.json"
+  },
+  {
+    "sample_id": "test-08",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "培训费用报销额度是多少？",
+    "answer": "根据已验证证据，已审批培训每人每年最多报销2000元，需提供课程凭证和发票。[文档ID: finance-training_claim]",
+    "tasks": [
+      "training_claim"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 0,
+      "fact_recall_proxy": 0,
+      "fact_checks": {
+        "training_claim": false
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": null,
+      "abstained": false,
+      "fully_answered": true,
+      "answerability_correct": true,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-08-dynamic-1.json"
+  },
+  {
+    "sample_id": "test-12",
+    "method": "positive",
+    "repetition": 1,
+    "query": "研发员工奖金政策如何计算，奖金预算如何计算？",
+    "answer": "根据已验证证据：\n\n1. 研发员工奖金计算：月基本工资 × 绩效系数，绩效系数由HR确认，适用对象为已转正员工。[hr-bonus_policy]\n\n2. 奖金预算计算：HR核定奖金总额 × 1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。[finance-bonus_budget]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "bonus_policy": true,
+        "bonus_budget": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-12-positive-1.json"
+  },
+  {
+    "sample_id": "test-12",
+    "method": "fixed",
+    "repetition": 1,
+    "query": "研发员工奖金政策如何计算，奖金预算如何计算？",
+    "answer": "根据已验证证据：\n\n1. 研发员工奖金计算：月基本工资 × 绩效系数，绩效系数由HR确认，适用对象为已转正员工。[hr-bonus_policy]\n\n2. 奖金预算计算：HR核定奖金总额 × 1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。[finance-bonus_budget]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "bonus_policy": true,
+        "bonus_budget": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-12-fixed-1.json"
+  },
+  {
+    "sample_id": "test-12",
+    "method": "dynamic",
+    "repetition": 1,
+    "query": "研发员工奖金政策如何计算，奖金预算如何计算？",
+    "answer": "根据已验证证据：\n\n- 研发员工奖金计算方式为：月基本工资 × 绩效系数，绩效系数由HR确认，适用对象为已转正员工。[hr-bonus_policy]\n- 奖金预算计算方式为：HR核定奖金总额 × 1.12，额外12%为示例雇主附加成本；每月按预计年度奖金的十二分之一预提。[finance-bonus_budget]\n\n缺少证据的子问题：无。",
+    "tasks": [
+      "bonus_policy",
+      "bonus_budget"
+    ],
+    "missing": [],
+    "scores": {
+      "quality_proxy": 1,
+      "fact_recall_proxy": 1,
+      "fact_checks": {
+        "bonus_policy": true,
+        "bonus_budget": true
+      },
+      "necessary_source_recall": 1.0,
+      "initial_source_recall": 1.0,
+      "evidence_recall": 1.0,
+      "citation_validity": 1.0,
+      "abstained": true,
+      "fully_answered": false,
+      "answerability_correct": false,
+      "unnecessary_call_rate": 0.0,
+      "generation_success": true
+    },
+    "trace": "traces/test-12-dynamic-1.json"
+  }
+]

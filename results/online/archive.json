@@ -1,0 +1,6 @@
+{
+  "records": 320,
+  "sha256": "638a450e0375a15018bec9d60dd90dae3cbb044fdb4fcc438ab890541dd3bcf8",
+  "format": "gzip compressed UTF-8 JSON Lines",
+  "filename": "traces.jsonl.gz"
+}

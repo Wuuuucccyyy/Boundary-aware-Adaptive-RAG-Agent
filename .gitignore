@@ -15,4 +15,4 @@ local/
 results/live/
 results/**/traces/
 results/dev_initial/
-results/development_validation/failures.json
+results/development_validation/

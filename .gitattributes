@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.gz binary
+# Preserve the exact generated snapshot bytes used by the frozen experiment.
+boundary_rag/data/*.json -text
+experiments/queries.json -text

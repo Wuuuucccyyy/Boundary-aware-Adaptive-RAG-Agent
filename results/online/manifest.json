@@ -1,0 +1,35 @@
+{
+  "identity": {
+    "backend": "deepseek",
+    "model": "deepseek-v4-pro",
+    "corpus_sha256": "8147c1618691f4705e46d8c73b661b7d320946729a6b83d23cc8a25da2e5763b",
+    "query_sha256": "aad2a638a4714e8554a056395a8037ee2fb059063973e4f2b40e416d57f61a14",
+    "code_sha256": "1d919b6bb88ddd9a0a577092fb1315a31e02226171fab9e971558a4b1a490adc",
+    "config": {
+      "top_k": 2,
+      "positive_top_k": 1,
+      "max_rounds": 3,
+      "max_retrieval_calls": 9,
+      "max_module_calls": 24,
+      "max_work_tokens": 40000,
+      "max_llm_tokens": 8000,
+      "max_output_tokens": 800,
+      "timeout_seconds": 45.0,
+      "max_seconds": 90.0,
+      "boundary_penalty": 0.55
+    },
+    "split": "test",
+    "repeats": 2,
+    "seed": 20261017,
+    "temperature": 0,
+    "thinking": "disabled",
+    "concurrency": 1
+  },
+  "started_at": "2026-10-17T08:09:09.525855+00:00",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "note": "No application cache; provider cache usage is retained. Timings exclude startup, index build and disk writes.",
+  "completed_at": "2026-10-17T08:17:11.491998+00:00",
+  "runs": 320,
+  "failure_records": 102
+}
