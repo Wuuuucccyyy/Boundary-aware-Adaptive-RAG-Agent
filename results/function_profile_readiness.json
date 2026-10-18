@@ -1,0 +1,168 @@
+{
+  "audit_kind": "offline_integration_readiness_not_performance_experiment",
+  "date_local": "2026-10-18",
+  "timezone": "America/Los_Angeles",
+  "recorded_at_utc": "2026-10-18T15:49:30.493871+00:00",
+  "commit_reviewed": "b747b954540b0a3ff617acd919fe7db0c502c913",
+  "profiles_sha256": "38d7248242387214cd2db9de33b9ab93fa35eb1c9207f0840630da1d0b11cb1b",
+  "core_sha256": "6c5b90ce3961892a8dec6f6e2aae38413ecd88a829506861c244f531b75489a5",
+  "retained_profiles": [
+    {
+      "function": "stats::t.test",
+      "tasks": [
+        "mean_hypothesis_test"
+      ],
+      "conditional_claims": 8,
+      "basis_counts": {
+        "inferred": 1,
+        "documented": 14,
+        "unknown": 2
+      },
+      "distribution_family": [
+        "unknown"
+      ]
+    },
+    {
+      "function": "stats::prcomp",
+      "tasks": [
+        "principal_component_analysis"
+      ],
+      "conditional_claims": 6,
+      "basis_counts": {
+        "inferred": 1,
+        "documented": 8,
+        "unknown": 3,
+        "conflict": 1
+      },
+      "distribution_family": [
+        "unknown"
+      ]
+    },
+    {
+      "function": "stats::kmeans",
+      "tasks": [
+        "clustering"
+      ],
+      "conditional_claims": 4,
+      "basis_counts": {
+        "inferred": 2,
+        "documented": 7,
+        "unknown": 3
+      },
+      "distribution_family": [
+        "unknown"
+      ]
+    },
+    {
+      "function": "base::scale",
+      "tasks": [
+        "column_centering_scaling"
+      ],
+      "conditional_claims": 6,
+      "basis_counts": {
+        "inferred": 1,
+        "documented": 8,
+        "unknown": 3
+      },
+      "distribution_family": [
+        "unknown"
+      ]
+    }
+  ],
+  "parser_probes": [
+    {
+      "query": "对矩阵做主成分分析",
+      "actual": [
+        {
+          "id": "unknown",
+          "topic": "unknown",
+          "conditions": {
+            "region": null,
+            "year": null,
+            "population": null
+          }
+        }
+      ]
+    },
+    {
+      "query": "比较同一批学生培训前后的平均成绩",
+      "actual": [
+        {
+          "id": "unknown",
+          "topic": "unknown",
+          "conditions": {
+            "region": null,
+            "year": null,
+            "population": null
+          }
+        }
+      ]
+    },
+    {
+      "query": "将每列中心化并缩放",
+      "actual": [
+        {
+          "id": "unknown",
+          "topic": "unknown",
+          "conditions": {
+            "region": null,
+            "year": null,
+            "population": null
+          }
+        }
+      ]
+    },
+    {
+      "query": "把这些样本分成三个簇",
+      "actual": [
+        {
+          "id": "unknown",
+          "topic": "unknown",
+          "conditions": {
+            "region": null,
+            "year": null,
+            "population": null
+          }
+        }
+      ]
+    }
+  ],
+  "comparator_probes": [
+    {
+      "name": "literal_unknown",
+      "actual": {
+        "state": "applicable",
+        "matches": [
+          "family"
+        ],
+        "conflicts": [],
+        "unknown": []
+      },
+      "required_semantics": "unknown"
+    },
+    {
+      "name": "union_type",
+      "actual": {
+        "state": "conflict",
+        "matches": [],
+        "conflicts": [
+          {
+            "field": "type",
+            "requested": "numeric",
+            "available": "numeric_or_complex"
+          }
+        ],
+        "unknown": []
+      },
+      "required_semantics": "supported_input_type"
+    }
+  ],
+  "rscript_on_current_path": false,
+  "model_api_calls": 0,
+  "limitations": [
+    "Four parser probes are integration checks, not benchmark accuracy.",
+    "Comparator probes use proposed profile values outside the frozen router original schema.",
+    "Rscript absence on PATH does not establish absence on the machine.",
+    "No statistical functions executed; no candidate comparison or quality/cost gain measured."
+  ]
+}
