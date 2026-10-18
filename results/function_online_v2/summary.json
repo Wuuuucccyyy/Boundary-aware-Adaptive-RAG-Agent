@@ -1,0 +1,30 @@
+[
+  {
+    "method": "full_profile",
+    "n": 12,
+    "configuration_score": 1,
+    "rendering_score": 1,
+    "end_to_end_score": 1,
+    "checks_per_case": 30.666666666666668,
+    "input_reads_per_case": 32.75,
+    "api_calls": 12,
+    "known_usage": 12,
+    "api_tokens": 21754,
+    "processing_proxy_per_case": 10927.416666666666,
+    "elapsed_ms_median": 5484.870000000228
+  },
+  {
+    "method": "dynamic",
+    "n": 12,
+    "configuration_score": 1,
+    "rendering_score": 1,
+    "end_to_end_score": 1,
+    "checks_per_case": 30.666666666666668,
+    "input_reads_per_case": 32.75,
+    "api_calls": 12,
+    "known_usage": 12,
+    "api_tokens": 21712,
+    "processing_proxy_per_case": 10922.833333333334,
+    "elapsed_ms_median": 5534.1741500014905
+  }
+]

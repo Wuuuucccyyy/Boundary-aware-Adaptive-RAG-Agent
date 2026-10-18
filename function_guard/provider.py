@@ -12,16 +12,24 @@ selected、state、action照抄decision。evidence至少一项，来自候选的
 
 
 def payload_for(request,decision):
-    candidates=[]
+    candidates=[];evidence_catalog={}
     for row in decision['candidates']:
         checks=[]
         if row['guard']:
             for c in row['guard']['checks']:
                 if c['active']=='false':continue
-                checks.append({k:c[k] for k in ('claim_id','attribute','value','basis','status','critical','reason','evidence')})
+                item={k:c[k] for k in ('claim_id','attribute','value','basis','status','critical')}
+                if c['status'] in ('unknown','documentation_conflict'):item['reason']=c['reason']
+                references=[]
+                for e in c['evidence']:
+                    ref=e['source_id']+':'+e['evidence_id']
+                    evidence_catalog[ref]={k:e[k] for k in ('section','quote','url')}
+                    references.append(ref)
+                item['evidence_refs']=references
+                checks.append(item)
         candidates.append(dict(id=row['id'],state=row['state'],checks=checks,goals=row['goal_checks']))
     # Policy name, ranking scores, expected answers and elapsed times are hidden.
-    return dict(request=request,decision={k:decision[k] for k in ('selected','state','action')},candidates=candidates,
+    return dict(request=request,decision={k:decision[k] for k in ('selected','state','action')},candidates=candidates,evidence_catalog=evidence_catalog,
                 scope=decision['scope'])
 
 

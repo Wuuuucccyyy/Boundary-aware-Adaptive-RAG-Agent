@@ -62,6 +62,8 @@ def main():
         old=json.loads(manifest.read_text(encoding='utf-8'))
         if not args.resume or old['identity']!=ident:p.error('Output exists; resume requires identical frozen inputs')
     else:write(manifest,dict(identity=ident,started_utc=datetime.now(timezone.utc).isoformat()))
+    snapshot_paths=sorted((ROOT/'function_guard').glob('*.py'))+[Path(__file__),ROOT/'boundary_rag/credentials.py']
+    write(args.output/'source_snapshot.json',{p.relative_to(ROOT).as_posix():p.read_text(encoding='utf-8') for p in snapshot_paths})
     cases=json.loads((ROOT/'function_guard/data/routing_cases.json').read_text(encoding='utf-8'))
     random.Random(901).shuffle(cases);records=[]
     for i,case in enumerate(cases):

@@ -1,0 +1,29 @@
+{
+  "identity": {
+    "code_sha256": "974c89ddc5ee1367a3560b517fc5f0a2099fe40d033b17a2212bab9655756e88",
+    "profile_snapshot": "67c4922afe39d071b9c4695ea8b07d6a9a3e0fd094940eaecb9f92053841c080",
+    "data_sha256": {
+      "condition_cases.json": "88f418dd500516408a90271c0827566ac65582e888ee2392272cd0fd50daddb8",
+      "example_request.json": "87f1c33c1312a46db285435a6a82a24cfe346f244f15f2569a66a8c8f2e1d7cc",
+      "routing_cases.json": "4456c7790575de22a2bf659f701f1cfa2eec2b20f2a9a1b8ec09a2fd349cb29e"
+    },
+    "model": "deepseek-v4-pro",
+    "methods": [
+      "full_profile",
+      "dynamic"
+    ],
+    "seed": 901,
+    "max_checks": 80,
+    "max_candidates": 4,
+    "max_output_tokens": 350,
+    "max_api_tokens": 12000,
+    "timeout_seconds": 45,
+    "repeats": 1,
+    "temperature": 0,
+    "thinking": "disabled",
+    "backend": "deepseek"
+  },
+  "started_utc": "2026-10-18T16:06:25.420288+00:00",
+  "completed_utc": "2026-10-18T16:07:35.885363+00:00",
+  "records": 24
+}

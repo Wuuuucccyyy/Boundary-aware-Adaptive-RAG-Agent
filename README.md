@@ -10,6 +10,8 @@
 
 函数画像研究已提供[首批5条待审样例](function_profiles/pilot_v1/README.md)：参照DARE，以R官方文档标注函数的数据输入要求，交付JSON/JSONL、逐项依据、参数条件、未知与冲突项。4条保留，`utils::read.csv`按基础读写规则排除；等待用户确认口径后再批量处理。
 
+新增[函数画像适配层](docs/FUNCTION_ADAPTER_GUIDE.md)，20条条件判断开发案例通过，可按参数与输入事实输出满足、冲突、未知及依据。相近配置在线对照的两种路由在12题上决定和检查次数相同；暂未证明动态边界独立收益。完整结果和首轮预算失败见[适配层报告](docs/FUNCTION_ADAPTER_REPORT.md)。
+
 ## 安装
 
 需要 Python 3.11+。运行时只使用标准库。
