@@ -1,0 +1,585 @@
+{
+  "query": "中国2026年成年人研究：随机试验的因果效应估计是多少，同时独立同分布数据的验证方案是什么？",
+  "method": "dynamic",
+  "size": 10,
+  "backend": "offline",
+  "settings": {
+    "max_rounds": 3,
+    "max_retrieval_calls": 30,
+    "top_k": 1,
+    "max_output_tokens": 700,
+    "max_api_tokens": 12000,
+    "max_seconds": 60,
+    "max_processing_proxy": 150000,
+    "risk_weight": 0.85,
+    "unknown_weight": 0.2
+  },
+  "snapshot": "e96040953a58e22a802bfac2304b3cd7f4de97880c7a52058e0e7dfa063ac297",
+  "requirements": [
+    {
+      "id": "effect",
+      "topic": "effect",
+      "conditions": {
+        "region": "CN",
+        "year": "2026",
+        "population": "adult",
+        "design": "randomized",
+        "goal": "causal"
+      }
+    },
+    {
+      "id": "validation",
+      "topic": "validation",
+      "conditions": {
+        "region": "CN",
+        "year": "2026",
+        "population": "adult",
+        "dependence": "iid"
+      }
+    }
+  ],
+  "state": {
+    "supports": {
+      "effect": [
+        {
+          "document_id": "s89a51b8b-report",
+          "quote": "合成随机分配试验的处理组减对照组均值差为2.459，该数值仅对应这项模拟试验。",
+          "source": "s89a51b8b"
+        }
+      ],
+      "validation": [
+        {
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。",
+          "source": "se42e10ee"
+        }
+      ]
+    },
+    "missing": [],
+    "rejections": []
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "missing_before": [
+        "effect",
+        "validation"
+      ],
+      "selected": [
+        "se42e10ee",
+        "s89a51b8b"
+      ],
+      "decisions": [
+        {
+          "source": "s89a51b8b",
+          "expected_support": {
+            "effect": 0.8412514323662695,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "applicable",
+              "matches": [
+                "region",
+                "year",
+                "population",
+                "design",
+                "goal"
+              ],
+              "conflicts": [],
+              "unknown": []
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "s89a51b8b-report",
+          "selected": true
+        },
+        {
+          "source": "s3c817a66",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "conflict",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [
+                {
+                  "field": "design",
+                  "requested": "randomized",
+                  "available": "observational"
+                },
+                {
+                  "field": "goal",
+                  "requested": "causal",
+                  "available": "association"
+                }
+              ],
+              "unknown": []
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "s3c817a66-report",
+          "selected": false
+        },
+        {
+          "source": "se42e10ee",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0.8440015278573542
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "applicable",
+              "matches": [
+                "region",
+                "year",
+                "population",
+                "dependence"
+              ],
+              "conflicts": [],
+              "unknown": []
+            }
+          },
+          "boundary_reference": "se42e10ee-report",
+          "selected": true
+        },
+        {
+          "source": "s7c65cdce",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "conflict",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [
+                {
+                  "field": "dependence",
+                  "requested": "iid",
+                  "available": "temporal"
+                }
+              ],
+              "unknown": []
+            }
+          },
+          "boundary_reference": "s7c65cdce-report",
+          "selected": false
+        },
+        {
+          "source": "sa5bb10eb",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "sa5bb10eb-report",
+          "selected": false
+        },
+        {
+          "source": "s9e8b68b9",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "s9e8b68b9-report",
+          "selected": false
+        },
+        {
+          "source": "s91b2aad9",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "s91b2aad9-report",
+          "selected": false
+        },
+        {
+          "source": "sd29489a9",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "sd29489a9-report",
+          "selected": false
+        },
+        {
+          "source": "s4f3b7321",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "population",
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "population",
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "s4f3b7321-report",
+          "selected": false
+        },
+        {
+          "source": "sd3fafbd4",
+          "expected_support": {
+            "effect": 0,
+            "validation": 0
+          },
+          "boundaries": {
+            "effect": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "design",
+                "goal"
+              ]
+            },
+            "validation": {
+              "state": "unknown",
+              "matches": [
+                "region",
+                "year",
+                "population"
+              ],
+              "conflicts": [],
+              "unknown": [
+                "dependence"
+              ]
+            }
+          },
+          "boundary_reference": "sd3fafbd4-report",
+          "selected": false
+        }
+      ],
+      "retrievals": [
+        {
+          "source": "se42e10ee",
+          "hits": [
+            {
+              "document": {
+                "id": "se42e10ee-report",
+                "source": "se42e10ee",
+                "title": "独立样本随机留出验证",
+                "text": "合成独立样本采用随机留出验证，测试集MAE为0.457。 研究适用条件：region=CN；year=2026；population=adult；dependence=iid",
+                "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。",
+                "conditions": {
+                  "region": "CN",
+                  "year": "2026",
+                  "population": "adult",
+                  "dependence": "iid"
+                },
+                "topic": "validation",
+                "version": "stats-v2-20261017"
+              },
+              "score": 19.45379
+            }
+          ]
+        },
+        {
+          "source": "s89a51b8b",
+          "hits": [
+            {
+              "document": {
+                "id": "s89a51b8b-report",
+                "source": "s89a51b8b",
+                "title": "随机试验组间均值差",
+                "text": "合成随机分配试验的处理组减对照组均值差为2.459，该数值仅对应这项模拟试验。 研究适用条件：region=CN；year=2026；population=adult；design=randomized；goal=causal",
+                "quote": "合成随机分配试验的处理组减对照组均值差为2.459，该数值仅对应这项模拟试验。",
+                "conditions": {
+                  "region": "CN",
+                  "year": "2026",
+                  "population": "adult",
+                  "design": "randomized",
+                  "goal": "causal"
+                },
+                "topic": "effect",
+                "version": "stats-v2-20261017"
+              },
+              "score": 21.62554
+            }
+          ]
+        }
+      ],
+      "verification": {
+        "supports": {
+          "effect": [
+            {
+              "document_id": "s89a51b8b-report",
+              "quote": "合成随机分配试验的处理组减对照组均值差为2.459，该数值仅对应这项模拟试验。",
+              "source": "s89a51b8b"
+            }
+          ],
+          "validation": [
+            {
+              "document_id": "se42e10ee-report",
+              "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。",
+              "source": "se42e10ee"
+            }
+          ]
+        },
+        "missing": [],
+        "rejections": []
+      }
+    }
+  ],
+  "selected_sources": [
+    "s89a51b8b",
+    "se42e10ee"
+  ],
+  "stop": "sufficient",
+  "output": {
+    "claims": [
+      {
+        "requirement_id": "effect",
+        "document_id": "s89a51b8b-report",
+        "quote": "合成随机分配试验的处理组减对照组均值差为2.459，该数值仅对应这项模拟试验。",
+        "source": "s89a51b8b"
+      },
+      {
+        "requirement_id": "validation",
+        "document_id": "se42e10ee-report",
+        "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。",
+        "source": "se42e10ee"
+      }
+    ],
+    "unknown": [],
+    "answer": "开发验证：从已验证原文摘录。"
+  },
+  "generation_error": null,
+  "api": {
+    "calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "usage_known": true
+  },
+  "events": [
+    {
+      "stage": "analysis",
+      "ms": 0.6201000069268048,
+      "processing_proxy": 98
+    },
+    {
+      "stage": "routing",
+      "ms": 0.5341999931260943,
+      "processing_proxy": 1588
+    },
+    {
+      "stage": "retrieval",
+      "ms": 0.06220000796020031,
+      "processing_proxy": 164
+    },
+    {
+      "stage": "retrieval",
+      "ms": 0.047600013203918934,
+      "processing_proxy": 190
+    },
+    {
+      "stage": "verification",
+      "ms": 0.010199990356341004,
+      "processing_proxy": 438
+    },
+    {
+      "stage": "generation",
+      "ms": 0.0030999945010989904,
+      "processing_proxy": 206
+    }
+  ],
+  "metrics": {
+    "retrieval_calls": 2,
+    "module_calls": 6,
+    "rounds": 1,
+    "elapsed_ms": 1.6670999757479876,
+    "processing_proxy": 2684
+  }
+}

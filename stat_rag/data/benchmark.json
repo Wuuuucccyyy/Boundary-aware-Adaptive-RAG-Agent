@@ -1,0 +1,225 @@
+[
+  {
+    "id": "stat-01",
+    "category": "single",
+    "query": "中国2026年成年人研究：随机试验的因果效应估计是多少？",
+    "split": "test",
+    "acceptable_documents": {
+      "effect": [
+        "s89a51b8b-report"
+      ]
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "stat-02",
+    "category": "single",
+    "query": "中国2026年成年人研究：观察研究的关联估计是多少？",
+    "split": "test",
+    "acceptable_documents": {
+      "effect": [
+        "s3c817a66-report"
+      ]
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "stat-03",
+    "category": "single",
+    "query": "中国2026年成年人研究：时间序列的验证方案和误差是什么？",
+    "split": "test",
+    "acceptable_documents": {
+      "validation": [
+        "s7c65cdce-report"
+      ]
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "stat-04",
+    "category": "single",
+    "query": "中国2026年成年人研究：独立同分布数据的验证设计是什么？",
+    "split": "test",
+    "acceptable_documents": {
+      "validation": [
+        "se42e10ee-report"
+      ]
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "stat-05",
+    "category": "single",
+    "query": "中国2026年成年人研究：已知逆抽样概率权重时总体均值是多少？",
+    "split": "test",
+    "acceptable_documents": {
+      "summary": [
+        "s9e8b68b9-report"
+      ]
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "stat-06",
+    "category": "single",
+    "query": "中国2026年成年人研究：只描述当前样本，样本均值是多少？",
+    "split": "test",
+    "acceptable_documents": {
+      "summary": [
+        "sa5bb10eb-report"
+      ]
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "stat-07",
+    "category": "single",
+    "query": "中国2026年成年人研究：假设MAR，缺失处理需要什么条件？",
+    "split": "test",
+    "acceptable_documents": {
+      "missing": [
+        "sd29489a9-report"
+      ]
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "stat-08",
+    "category": "cross2",
+    "query": "中国2026年成年人研究：随机试验的因果效应估计是多少，同时独立同分布数据的验证方案是什么？",
+    "split": "test",
+    "acceptable_documents": {
+      "effect": [
+        "s89a51b8b-report"
+      ],
+      "validation": [
+        "se42e10ee-report"
+      ]
+    },
+    "necessary_source_count": 2
+  },
+  {
+    "id": "stat-09",
+    "category": "cross4",
+    "query": "中国2026年成年人研究：请组合预测结果、残差诊断、时间序列验证方案和MAR缺失处理。",
+    "split": "test",
+    "acceptable_documents": {
+      "prediction": [
+        "s4f3b7321-report"
+      ],
+      "diagnostics": [
+        "sd3fafbd4-report"
+      ],
+      "validation": [
+        "s7c65cdce-report"
+      ],
+      "missing": [
+        "sd29489a9-report"
+      ]
+    },
+    "necessary_source_count": 4
+  },
+  {
+    "id": "stat-10",
+    "category": "unsupported",
+    "query": "中国2026年成年人研究：仅有观察研究，因果效应是多少？",
+    "split": "test",
+    "acceptable_documents": {
+      "effect": []
+    },
+    "necessary_source_count": 0
+  },
+  {
+    "id": "stat-11",
+    "category": "unsupported",
+    "query": "中国2026年老年人研究：请给出预测结果。",
+    "split": "test",
+    "acceptable_documents": {
+      "prediction": []
+    },
+    "necessary_source_count": 0
+  },
+  {
+    "id": "stat-12",
+    "category": "partial",
+    "query": "中国2026年成年人研究：随机试验的因果效应估计是多少，以及公司的实际营业收入是多少？",
+    "split": "test",
+    "acceptable_documents": {
+      "effect": [
+        "s89a51b8b-report"
+      ],
+      "unknown": []
+    },
+    "necessary_source_count": 1
+  },
+  {
+    "id": "dev-stat-01",
+    "category": "dev",
+    "query": "中国2026年成年人研究：随机试验效应估计，请附原文。",
+    "split": "dev",
+    "acceptable_documents": {
+      "effect": [
+        "s89a51b8b-report"
+      ]
+    }
+  },
+  {
+    "id": "dev-stat-02",
+    "category": "dev",
+    "query": "中国2026年成年人研究：时间序列验证设计，请解释训练与测试顺序。",
+    "split": "dev",
+    "acceptable_documents": {
+      "validation": [
+        "s7c65cdce-report"
+      ]
+    }
+  },
+  {
+    "id": "dev-stat-03",
+    "category": "dev",
+    "query": "中国2026年成年人研究：MCAR缺失处理有哪些条件？",
+    "split": "dev",
+    "acceptable_documents": {
+      "missing": [
+        "s91b2aad9-report"
+      ]
+    }
+  },
+  {
+    "id": "dev-stat-04",
+    "category": "dev",
+    "query": "中国2026年成年人研究：预测值与残差情况是什么？",
+    "split": "dev",
+    "acceptable_documents": {
+      "prediction": [
+        "s4f3b7321-report"
+      ],
+      "diagnostics": [
+        "sd3fafbd4-report"
+      ]
+    }
+  },
+  {
+    "id": "dev-stat-05",
+    "category": "dev",
+    "query": "中国2026年成年人研究：缺失机制是MNAR，缺失处理如何进行？",
+    "split": "dev",
+    "acceptable_documents": {
+      "missing": []
+    }
+  },
+  {
+    "id": "dev-stat-06",
+    "category": "dev",
+    "query": "中国2026年成年人研究：独立同分布验证方案和样本均值分别是什么？",
+    "split": "dev",
+    "acceptable_documents": {
+      "validation": [
+        "se42e10ee-report"
+      ],
+      "summary": [
+        "sa5bb10eb-report"
+      ]
+    }
+  }
+]

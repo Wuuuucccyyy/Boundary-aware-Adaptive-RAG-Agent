@@ -13,7 +13,8 @@ dependencies = []
 boundary-rag = "boundary_rag.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["boundary_rag*"]
+include = ["boundary_rag*", "stat_rag*"]
 
 [tool.setuptools.package-data]
 boundary_rag = ["data/*.json"]
+stat_rag = ["data/*.json"]
