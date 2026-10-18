@@ -1,0 +1,13 @@
+{
+  "records": 5,
+  "retained": 4,
+  "excluded": 1,
+  "claims": 61,
+  "inference_count": 5,
+  "unknown_count": 11,
+  "conflict_count": 2,
+  "checks": "passed",
+  "original_source_hashes_and_quote_presence_checked": true,
+  "semantic_accuracy": "requires_human_review",
+  "bulk_processing": "not_started"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "stats_package",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/stats-package.html",
+    "sha256": "dd2d981ce473b12b0a052bc65d6c04b1470cff54987362a06c01f7379371f014",
+    "package_version": "4.5.0",
+    "retrieved_at_utc": "2026-10-18T15:34:27.833263+00:00"
+  },
+  {
+    "id": "base_package",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/base/html/base-package.html",
+    "sha256": "e1407279c0dbb42a8d9d840d8c298846d9bc3e72067fdef6a660fe77bda72fa9",
+    "package_version": "4.5.0",
+    "retrieved_at_utc": "2026-10-18T15:34:29.494898+00:00"
+  },
+  {
+    "id": "utils_package",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/utils/html/utils-package.html",
+    "sha256": "b8ba29d9505058f3666fc38ddb2f3a11edcacfe8d1edc5974277247167a83ab7",
+    "package_version": "4.5.0",
+    "retrieved_at_utc": "2026-10-18T15:34:32.342286+00:00"
+  },
+  {
+    "id": "t_test",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/t.test.html",
+    "sha256": "44b4190dbd5a9ec3937fe02eefe8616360c83383f00d107b34e9c3419ce63b34",
+    "package_version": "4.5.1",
+    "retrieved_at_utc": "2026-10-18T15:34:34.542380+00:00"
+  },
+  {
+    "id": "prcomp",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/prcomp.html",
+    "sha256": "68ec91e043adfb33dc34e1a0c051c24f3decc3bcd338698bc617ce61d4bcc499",
+    "package_version": "4.5.0",
+    "retrieved_at_utc": "2026-10-18T15:34:36.817912+00:00"
+  },
+  {
+    "id": "kmeans",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/kmeans.html",
+    "sha256": "2fcb01f822daa26f872cd1f78bc970e3f2474bbd20c7fc3b3256621865e6e351",
+    "package_version": "4.5.0",
+    "retrieved_at_utc": "2026-10-18T15:34:43.352179+00:00"
+  },
+  {
+    "id": "scale",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/base/html/scale.html",
+    "sha256": "acac2de0cee9f4c9a254156bab4532b6100669b57fcd662847c3c1d49e3ce176",
+    "package_version": "4.5.0",
+    "retrieved_at_utc": "2026-10-18T15:34:47.022684+00:00"
+  },
+  {
+    "id": "read_csv",
+    "url": "https://stat.ethz.ch/R-manual/R-patched/library/utils/html/read.table.html",
+    "sha256": "6875f8cb89c5d15ed5f21e789b375059fffdd70c7a2d1bbe1b02f4c7ed7712c1",
+    "package_version": "4.5.0",
+    "retrieved_at_utc": "2026-10-18T15:34:49.697680+00:00"
+  }
+]

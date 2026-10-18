@@ -1,0 +1,1674 @@
+[
+  {
+    "schema_version": "0.1.0",
+    "record_id": "stats::t.test",
+    "package_name": "stats",
+    "function_name": "t.test",
+    "documented_package_version": "4.5.1",
+    "review_status": "pending_user_review",
+    "profile_target": "function_input_requirements",
+    "document_sources": [
+      {
+        "id": "stats_package",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/stats-package.html",
+        "sha256": "dd2d981ce473b12b0a052bc65d6c04b1470cff54987362a06c01f7379371f014",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:27.833263+00:00",
+        "role": "package_overview"
+      },
+      {
+        "id": "t_test",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/t.test.html",
+        "sha256": "44b4190dbd5a9ec3937fe02eefe8616360c83383f00d107b34e9c3419ce63b34",
+        "package_version": "4.5.1",
+        "retrieved_at_utc": "2026-10-18T15:34:34.542380+00:00",
+        "role": "function_reference"
+      }
+    ],
+    "documentation_review": {
+      "package_description": "read",
+      "description": "read",
+      "usage": "read",
+      "arguments": "read",
+      "value": "read",
+      "examples": "read"
+    },
+    "selection": {
+      "keep": true,
+      "reason": "均值检验；有明确的数值输入与分析输出。",
+      "rule": "analytical_method_or_transform",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    "data_profile": {
+      "data_modality": [
+        {
+          "id": "data_modality.1",
+          "attribute": "modality",
+          "value": "tabular",
+          "basis": "inferred",
+          "strength": "supported",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2",
+            "E3"
+          ],
+          "reason": "把向量和公式变量归入表格模态；这是分类映射，不是原文术语。"
+        }
+      ],
+      "feature_type": [
+        {
+          "id": "feature_type.1",
+          "attribute": "response",
+          "value": "numeric",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        },
+        {
+          "id": "feature_type.2",
+          "attribute": "grouping",
+          "value": "factor_two_levels",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "formula"
+            },
+            {
+              "target": "rhs",
+              "operator": "equals",
+              "value": "group_factor"
+            }
+          ],
+          "evidence_ids": [
+            "E3"
+          ],
+          "reason": null
+        }
+      ],
+      "distribution_assumption": [
+        {
+          "id": "distribution_assumption.1",
+          "attribute": "distribution_family",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "所读页面未明确说明分布族；不依据函数名补写正态。"
+        },
+        {
+          "id": "distribution_assumption.2",
+          "attribute": "variance_treatment",
+          "value": "pooled",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "var.equal",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "evidence_ids": [
+            "E6"
+          ],
+          "reason": null
+        },
+        {
+          "id": "distribution_assumption.3",
+          "attribute": "variance_treatment",
+          "value": "separate_with_Welch_df",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "var.equal",
+              "operator": "equals",
+              "value": false
+            }
+          ],
+          "evidence_ids": [
+            "E6"
+          ],
+          "reason": null
+        }
+      ],
+      "dimensionality": [
+        {
+          "id": "dimensionality.1",
+          "attribute": "input_structure",
+          "value": "x_vector_optional_y_vector",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        },
+        {
+          "id": "dimensionality.2",
+          "attribute": "dimension_regime",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "未定义low/high，也未给出完整样本量阈值。"
+        }
+      ],
+      "missing_data_handling": [
+        {
+          "id": "missing_data_handling.1",
+          "attribute": "missing_values",
+          "value": "removed",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "default"
+            },
+            {
+              "target": "paired",
+              "operator": "equals",
+              "value": false
+            }
+          ],
+          "evidence_ids": [
+            "E5"
+          ],
+          "reason": null
+        },
+        {
+          "id": "missing_data_handling.2",
+          "attribute": "missing_values",
+          "value": "pairwise_removed",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "default"
+            },
+            {
+              "target": "paired",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "evidence_ids": [
+            "E4",
+            "E5"
+          ],
+          "reason": null
+        },
+        {
+          "id": "missing_data_handling.3",
+          "attribute": "formula_na_action_default",
+          "value": "na.pass",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "formula"
+            }
+          ],
+          "evidence_ids": [
+            "E10"
+          ],
+          "reason": null
+        }
+      ],
+      "specific_constraints": [
+        {
+          "id": "specific_constraints.1",
+          "attribute": "x_and_supplied_y",
+          "value": "nonempty",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.2",
+          "attribute": "paired_inputs",
+          "value": "both_present_equal_length",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "default"
+            },
+            {
+              "target": "paired",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "evidence_ids": [
+            "E4"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.3",
+          "attribute": "paired_argument",
+          "value": "not_forwarded",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "formula"
+            }
+          ],
+          "evidence_ids": [
+            "E13"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.4",
+          "attribute": "effectively_constant",
+          "value": "error",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [],
+          "evidence_ids": [
+            "E7"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.5",
+          "attribute": "infinite_input",
+          "value": "returns_result_documented_as_not_useful",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [],
+          "evidence_ids": [
+            "E8"
+          ],
+          "reason": null
+        }
+      ]
+    },
+    "task_type": [
+      {
+        "id": "task_type.1",
+        "attribute": "task",
+        "value": "mean_hypothesis_test",
+        "basis": "documented",
+        "strength": "supported",
+        "applies_when": [],
+        "evidence_ids": [
+          "E1",
+          "E9"
+        ],
+        "reason": null
+      }
+    ],
+    "output_summary": [
+      {
+        "value": "test_statistic_df_pvalue_confidence_interval_mean_estimate",
+        "evidence_ids": [
+          "E9"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "t_test",
+        "section": "Description",
+        "locator": "Description",
+        "quote": "one and two sample"
+      },
+      {
+        "id": "E2",
+        "source_id": "t_test",
+        "section": "Arguments: x, y",
+        "locator": "Arguments: x, y",
+        "quote": "non-empty"
+      },
+      {
+        "id": "E3",
+        "source_id": "t_test",
+        "section": "Arguments: formula",
+        "locator": "Arguments: formula",
+        "quote": "two levels"
+      },
+      {
+        "id": "E4",
+        "source_id": "t_test",
+        "section": "Details: paired",
+        "locator": "Details: paired",
+        "quote": "same length"
+      },
+      {
+        "id": "E5",
+        "source_id": "t_test",
+        "section": "Details: missing values",
+        "locator": "Details: missing values",
+        "quote": "silently removed"
+      },
+      {
+        "id": "E6",
+        "source_id": "t_test",
+        "section": "Arguments: var.equal",
+        "locator": "Arguments: var.equal",
+        "quote": "Welch"
+      },
+      {
+        "id": "E7",
+        "source_id": "t_test",
+        "section": "Details: degenerate input",
+        "locator": "Details: degenerate input",
+        "quote": "effectively constant"
+      },
+      {
+        "id": "E8",
+        "source_id": "t_test",
+        "section": "Details: infinite input",
+        "locator": "Details: infinite input",
+        "quote": "infinite values"
+      },
+      {
+        "id": "E9",
+        "source_id": "t_test",
+        "section": "Value",
+        "locator": "Value",
+        "quote": "htest"
+      },
+      {
+        "id": "E10",
+        "source_id": "t_test",
+        "section": "Usage: formula",
+        "locator": "Usage: formula",
+        "quote": "na.action = na.pass"
+      },
+      {
+        "id": "E11",
+        "source_id": "stats_package",
+        "section": "Footer",
+        "locator": "Footer",
+        "quote": "4.5.0"
+      },
+      {
+        "id": "E12",
+        "source_id": "t_test",
+        "section": "Footer",
+        "locator": "Footer",
+        "quote": "4.5.1"
+      },
+      {
+        "id": "E13",
+        "source_id": "t_test",
+        "section": "Arguments: ...",
+        "locator": "Arguments: ...",
+        "quote": "but not paired"
+      }
+    ],
+    "inferences": [
+      {
+        "claim_id": "data_modality.1",
+        "reason": "把向量和公式变量归入表格模态；这是分类映射，不是原文术语。"
+      }
+    ],
+    "unknown_items": [
+      {
+        "claim_id": "distribution_assumption.1",
+        "reason": "所读页面未明确说明分布族；不依据函数名补写正态。"
+      },
+      {
+        "claim_id": "dimensionality.2",
+        "reason": "未定义low/high，也未给出完整样本量阈值。"
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "C1",
+        "kind": "source_version_mismatch",
+        "affected_claim_ids": [],
+        "evidence_ids": [
+          "E11",
+          "E12"
+        ],
+        "alternatives": [
+          "package_overview: 4.5.0",
+          "function_reference: 4.5.1"
+        ],
+        "resolution": "unresolved",
+        "note": "保留各页面版本；函数要求只来自函数页，不声称全部材料属于同一版本。"
+      }
+    ],
+    "review_notes": [
+      "具体数据是否配对及满足统计假设，本记录未判断。"
+    ]
+  },
+  {
+    "schema_version": "0.1.0",
+    "record_id": "stats::prcomp",
+    "package_name": "stats",
+    "function_name": "prcomp",
+    "documented_package_version": "4.5.0",
+    "review_status": "pending_user_review",
+    "profile_target": "function_input_requirements",
+    "document_sources": [
+      {
+        "id": "stats_package",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/stats-package.html",
+        "sha256": "dd2d981ce473b12b0a052bc65d6c04b1470cff54987362a06c01f7379371f014",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:27.833263+00:00",
+        "role": "package_overview"
+      },
+      {
+        "id": "prcomp",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/prcomp.html",
+        "sha256": "68ec91e043adfb33dc34e1a0c051c24f3decc3bcd338698bc617ce61d4bcc499",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:36.817912+00:00",
+        "role": "function_reference"
+      }
+    ],
+    "documentation_review": {
+      "package_description": "read",
+      "description": "read",
+      "usage": "read",
+      "arguments": "read",
+      "value": "read",
+      "examples": "read"
+    },
+    "selection": {
+      "keep": true,
+      "reason": "主成分分析；有矩阵输入及载荷、得分等分析输出。",
+      "rule": "analytical_method_or_transform",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    "data_profile": {
+      "data_modality": [
+        {
+          "id": "data_modality.1",
+          "attribute": "modality",
+          "value": "tabular",
+          "basis": "inferred",
+          "strength": "supported",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": "依据矩阵/数据框接口映射为表格模态。"
+        }
+      ],
+      "feature_type": [
+        {
+          "id": "feature_type.1",
+          "attribute": "input",
+          "value": "numeric_or_complex",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "default"
+            }
+          ],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        },
+        {
+          "id": "feature_type.2",
+          "attribute": "formula_variables",
+          "value": "numeric",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "formula"
+            }
+          ],
+          "evidence_ids": [
+            "E3"
+          ],
+          "reason": null
+        }
+      ],
+      "distribution_assumption": [
+        {
+          "id": "distribution_assumption.1",
+          "attribute": "distribution_family",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "文档未给出分布限制；示例中的rnorm不是必要条件。"
+        }
+      ],
+      "dimensionality": [
+        {
+          "id": "dimensionality.1",
+          "attribute": "input_structure",
+          "value": "matrix_or_data_frame",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        },
+        {
+          "id": "dimensionality.2",
+          "attribute": "rank_parameter",
+          "value": "maximum_retained_components",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [],
+          "evidence_ids": [
+            "E6"
+          ],
+          "reason": null
+        },
+        {
+          "id": "dimensionality.3",
+          "attribute": "dimension_regime",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "未定义高维或低维适用范围，亦不从降维任务反推高维要求。"
+        }
+      ],
+      "missing_data_handling": [
+        {
+          "id": "missing_data_handling.1",
+          "attribute": "formula_default",
+          "value": "options_na.action_else_na.fail; factory_default_na.omit",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "formula"
+            }
+          ],
+          "evidence_ids": [
+            "E4",
+            "E5"
+          ],
+          "reason": null
+        },
+        {
+          "id": "missing_data_handling.2",
+          "attribute": "default_method",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "default"
+            }
+          ],
+          "evidence_ids": [],
+          "reason": "本页没有明确说明矩阵默认接口遇到NA的处理。"
+        }
+      ],
+      "specific_constraints": [
+        {
+          "id": "specific_constraints.1",
+          "attribute": "formula_response",
+          "value": "absent",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "formula"
+            }
+          ],
+          "evidence_ids": [
+            "E3"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.2",
+          "attribute": "center_or_scale_vector_length",
+          "value": "ncol(x)",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "center_or_scale_parameter",
+              "operator": "equals",
+              "value": "vector"
+            }
+          ],
+          "evidence_ids": [
+            "E11"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.3",
+          "attribute": "degenerate_column_scaling_rule",
+          "value": "unknown",
+          "basis": "conflict",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [
+            "E7",
+            "E8",
+            "E9"
+          ],
+          "reason": "正式参数scale.与Details中的scale拼写不同，未自行归并。"
+        }
+      ]
+    },
+    "task_type": [
+      {
+        "id": "task_type.1",
+        "attribute": "task",
+        "value": "principal_component_analysis",
+        "basis": "documented",
+        "strength": "supported",
+        "applies_when": [],
+        "evidence_ids": [
+          "E1"
+        ],
+        "reason": null
+      }
+    ],
+    "output_summary": [
+      {
+        "value": "component_sd_loadings_optional_scores_center_scaling",
+        "evidence_ids": [
+          "E10"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "prcomp",
+        "section": "Description",
+        "locator": "Description",
+        "quote": "principal components analysis"
+      },
+      {
+        "id": "E2",
+        "source_id": "prcomp",
+        "section": "Arguments: x",
+        "locator": "Arguments: x",
+        "quote": "numeric or complex"
+      },
+      {
+        "id": "E3",
+        "source_id": "prcomp",
+        "section": "Arguments: formula",
+        "locator": "Arguments: formula",
+        "quote": "no response variable"
+      },
+      {
+        "id": "E4",
+        "source_id": "prcomp",
+        "section": "Arguments: na.action",
+        "locator": "Arguments: na.action",
+        "quote": "na.fail"
+      },
+      {
+        "id": "E5",
+        "source_id": "prcomp",
+        "section": "Arguments: na.action",
+        "locator": "Arguments: na.action",
+        "quote": "na.omit"
+      },
+      {
+        "id": "E6",
+        "source_id": "prcomp",
+        "section": "Arguments: rank.",
+        "locator": "Arguments: rank.",
+        "quote": "maximal rank"
+      },
+      {
+        "id": "E7",
+        "source_id": "prcomp",
+        "section": "Usage / Arguments: scale.",
+        "locator": "Usage / Arguments: scale.",
+        "quote": "scale."
+      },
+      {
+        "id": "E8",
+        "source_id": "prcomp",
+        "section": "Details: scaling",
+        "locator": "Details: scaling",
+        "quote": "scale = TRUE"
+      },
+      {
+        "id": "E9",
+        "source_id": "prcomp",
+        "section": "Details: scaling",
+        "locator": "Details: scaling",
+        "quote": "zero or constant"
+      },
+      {
+        "id": "E10",
+        "source_id": "prcomp",
+        "section": "Value",
+        "locator": "Value",
+        "quote": "rotation"
+      },
+      {
+        "id": "E11",
+        "source_id": "prcomp",
+        "section": "Arguments: center / scale.",
+        "locator": "Arguments: center / scale.",
+        "quote": "number of columns"
+      }
+    ],
+    "inferences": [
+      {
+        "claim_id": "data_modality.1",
+        "reason": "依据矩阵/数据框接口映射为表格模态。"
+      }
+    ],
+    "unknown_items": [
+      {
+        "claim_id": "distribution_assumption.1",
+        "reason": "文档未给出分布限制；示例中的rnorm不是必要条件。"
+      },
+      {
+        "claim_id": "dimensionality.3",
+        "reason": "未定义高维或低维适用范围，亦不从降维任务反推高维要求。"
+      },
+      {
+        "claim_id": "missing_data_handling.2",
+        "reason": "本页没有明确说明矩阵默认接口遇到NA的处理。"
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "C1",
+        "kind": "parameter_name_ambiguity",
+        "affected_claim_ids": [
+          "specific_constraints.3"
+        ],
+        "evidence_ids": [
+          "E7",
+          "E8",
+          "E9"
+        ],
+        "alternatives": [
+          "Usage/Arguments: scale.",
+          "Details: scale = TRUE; zero/constant-column restriction"
+        ],
+        "resolution": "unresolved",
+        "note": "这是文字/参数归属歧义，未声称运行行为矛盾；不靠R参数部分匹配常识自动修复。"
+      }
+    ],
+    "review_notes": [
+      "同页predict方法的newdata约束不归入prcomp拟合输入。",
+      "公式与默认接口分开；未知不表示可接受NA。"
+    ]
+  },
+  {
+    "schema_version": "0.1.0",
+    "record_id": "stats::kmeans",
+    "package_name": "stats",
+    "function_name": "kmeans",
+    "documented_package_version": "4.5.0",
+    "review_status": "pending_user_review",
+    "profile_target": "function_input_requirements",
+    "document_sources": [
+      {
+        "id": "stats_package",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/stats-package.html",
+        "sha256": "dd2d981ce473b12b0a052bc65d6c04b1470cff54987362a06c01f7379371f014",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:27.833263+00:00",
+        "role": "package_overview"
+      },
+      {
+        "id": "kmeans",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/stats/html/kmeans.html",
+        "sha256": "2fcb01f822daa26f872cd1f78bc970e3f2474bbd20c7fc3b3256621865e6e351",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:43.352179+00:00",
+        "role": "function_reference"
+      }
+    ],
+    "documentation_review": {
+      "package_description": "read",
+      "description": "read",
+      "usage": "read",
+      "arguments": "read",
+      "value": "read",
+      "examples": "read"
+    },
+    "selection": {
+      "keep": true,
+      "reason": "聚类算法；明确规定输入与中心，并返回聚类结果。",
+      "rule": "analytical_method_or_transform",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    "data_profile": {
+      "data_modality": [
+        {
+          "id": "data_modality.1",
+          "attribute": "modality",
+          "value": "tabular",
+          "basis": "inferred",
+          "strength": "supported",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": "依据数值矩阵、向量或全数值数据框接口映射。"
+        }
+      ],
+      "feature_type": [
+        {
+          "id": "feature_type.1",
+          "attribute": "input",
+          "value": "numeric_or_coercible_to_numeric_matrix",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        }
+      ],
+      "distribution_assumption": [
+        {
+          "id": "distribution_assumption.1",
+          "attribute": "distribution_family",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [
+            "E8"
+          ],
+          "reason": "未明确分布族；示例rnorm不等于正态要求。"
+        }
+      ],
+      "dimensionality": [
+        {
+          "id": "dimensionality.1",
+          "attribute": "input_structure",
+          "value": "matrix_or_coercible",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        },
+        {
+          "id": "dimensionality.2",
+          "attribute": "dimension_regime",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "文档未定义low/high及一般样本量界限。"
+        }
+      ],
+      "missing_data_handling": [
+        {
+          "id": "missing_data_handling.1",
+          "attribute": "missing_values",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "本页未明确NA支持或处理，不能推断为must_be_complete或any。"
+        }
+      ],
+      "specific_constraints": [
+        {
+          "id": "specific_constraints.1",
+          "attribute": "initial_centers",
+          "value": "distinct",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "centers",
+              "operator": "equals",
+              "value": "explicit_centers"
+            }
+          ],
+          "evidence_ids": [
+            "E3"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.2",
+          "attribute": "distinct_rows_for_initialization",
+          "value": "at_least_k",
+          "basis": "inferred",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "centers",
+              "operator": "equals",
+              "value": "cluster_count"
+            }
+          ],
+          "evidence_ids": [
+            "E3"
+          ],
+          "reason": "要选择k个不同的数据行作为初始中心，至少需k个不同数据行；不声称这是充分条件。"
+        },
+        {
+          "id": "specific_constraints.3",
+          "attribute": "cluster_count_one",
+          "value": "supported",
+          "basis": "documented",
+          "strength": "supported",
+          "applies_when": [],
+          "evidence_ids": [
+            "E4"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.4",
+          "attribute": "very_close_rows",
+          "value": "possible_nonconvergence_ifault4",
+          "basis": "documented",
+          "strength": "warning",
+          "applies_when": [
+            {
+              "target": "algorithm",
+              "operator": "equals",
+              "value": "Hartigan-Wong"
+            }
+          ],
+          "evidence_ids": [
+            "E5"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.5",
+          "attribute": "unassigned_initial_center",
+          "value": "error",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "algorithm",
+              "operator": "equals",
+              "value": "Hartigan-Wong"
+            },
+            {
+              "target": "centers",
+              "operator": "equals",
+              "value": "explicit_centers"
+            }
+          ],
+          "evidence_ids": [
+            "E6"
+          ],
+          "reason": null
+        }
+      ]
+    },
+    "task_type": [
+      {
+        "id": "task_type.1",
+        "attribute": "task",
+        "value": "clustering",
+        "basis": "documented",
+        "strength": "supported",
+        "applies_when": [],
+        "evidence_ids": [
+          "E1"
+        ],
+        "reason": null
+      }
+    ],
+    "output_summary": [
+      {
+        "value": "assignments_centers_sums_of_squares_sizes_iterations_ifault",
+        "evidence_ids": [
+          "E7"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "kmeans",
+        "section": "Description",
+        "locator": "Description",
+        "quote": "k-means clustering"
+      },
+      {
+        "id": "E2",
+        "source_id": "kmeans",
+        "section": "Arguments: x",
+        "locator": "Arguments: x",
+        "quote": "numeric matrix"
+      },
+      {
+        "id": "E3",
+        "source_id": "kmeans",
+        "section": "Arguments: centers",
+        "locator": "Arguments: centers",
+        "quote": "distinct"
+      },
+      {
+        "id": "E4",
+        "source_id": "kmeans",
+        "section": "Details",
+        "locator": "Details",
+        "quote": "k = 1"
+      },
+      {
+        "id": "E5",
+        "source_id": "kmeans",
+        "section": "Details: Quick-Transfer",
+        "locator": "Details: Quick-Transfer",
+        "quote": "extremely close"
+      },
+      {
+        "id": "E6",
+        "source_id": "kmeans",
+        "section": "Details: initial centers",
+        "locator": "Details: initial centers",
+        "quote": "Hartigan"
+      },
+      {
+        "id": "E7",
+        "source_id": "kmeans",
+        "section": "Value",
+        "locator": "Value",
+        "quote": "cluster"
+      },
+      {
+        "id": "E8",
+        "source_id": "kmeans",
+        "section": "Examples",
+        "locator": "Examples",
+        "quote": "rnorm"
+      }
+    ],
+    "inferences": [
+      {
+        "claim_id": "data_modality.1",
+        "reason": "依据数值矩阵、向量或全数值数据框接口映射。"
+      },
+      {
+        "claim_id": "specific_constraints.2",
+        "reason": "要选择k个不同的数据行作为初始中心，至少需k个不同数据行；不声称这是充分条件。"
+      }
+    ],
+    "unknown_items": [
+      {
+        "claim_id": "distribution_assumption.1",
+        "reason": "未明确分布族；示例rnorm不等于正态要求。"
+      },
+      {
+        "claim_id": "dimensionality.2",
+        "reason": "文档未定义low/high及一般样本量界限。"
+      },
+      {
+        "claim_id": "missing_data_handling.1",
+        "reason": "本页未明确NA支持或处理，不能推断为must_be_complete或any。"
+      }
+    ],
+    "conflicts": [],
+    "review_notes": [
+      "聚类算法支持的输入要求，不代表已检查任何实际数据。"
+    ]
+  },
+  {
+    "schema_version": "0.1.0",
+    "record_id": "base::scale",
+    "package_name": "base",
+    "function_name": "scale",
+    "documented_package_version": "4.5.0",
+    "review_status": "pending_user_review",
+    "profile_target": "function_input_requirements",
+    "document_sources": [
+      {
+        "id": "base_package",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/base/html/base-package.html",
+        "sha256": "e1407279c0dbb42a8d9d840d8c298846d9bc3e72067fdef6a660fe77bda72fa9",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:29.494898+00:00",
+        "role": "package_overview"
+      },
+      {
+        "id": "scale",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/base/html/scale.html",
+        "sha256": "acac2de0cee9f4c9a254156bab4532b6100669b57fcd662847c3c1d49e3ce176",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:47.022684+00:00",
+        "role": "function_reference"
+      }
+    ],
+    "documentation_review": {
+      "package_description": "read",
+      "description": "read",
+      "usage": "read",
+      "arguments": "read",
+      "value": "read",
+      "examples": "read"
+    },
+    "selection": {
+      "keep": true,
+      "reason": "按列中心化/缩放，属于有明确输入要求的数据变换。",
+      "rule": "analytical_method_or_transform",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    "data_profile": {
+      "data_modality": [
+        {
+          "id": "data_modality.1",
+          "attribute": "modality",
+          "value": "tabular",
+          "basis": "inferred",
+          "strength": "supported",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": "依据矩阵列变换接口映射为表格模态。"
+        }
+      ],
+      "feature_type": [
+        {
+          "id": "feature_type.1",
+          "attribute": "input",
+          "value": "numeric_matrix_like",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "method",
+              "operator": "equals",
+              "value": "default"
+            }
+          ],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        }
+      ],
+      "distribution_assumption": [
+        {
+          "id": "distribution_assumption.1",
+          "attribute": "distribution_family",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "所读文档未明确分布限制，不填any。"
+        }
+      ],
+      "dimensionality": [
+        {
+          "id": "dimensionality.1",
+          "attribute": "input_structure",
+          "value": "matrix_like",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [],
+          "evidence_ids": [
+            "E2"
+          ],
+          "reason": null
+        },
+        {
+          "id": "dimensionality.2",
+          "attribute": "dimension_regime",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "未定义low/high，也未完整规定样本量界限。"
+        }
+      ],
+      "missing_data_handling": [
+        {
+          "id": "missing_data_handling.1",
+          "attribute": "centering_mean",
+          "value": "omit_NA_in_statistic",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "center",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "evidence_ids": [
+            "E4"
+          ],
+          "reason": null
+        },
+        {
+          "id": "missing_data_handling.2",
+          "attribute": "rms_calculation",
+          "value": "use_nonmissing_entries",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "scale",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "evidence_ids": [
+            "E5"
+          ],
+          "reason": null
+        },
+        {
+          "id": "missing_data_handling.3",
+          "attribute": "all_missing_or_degenerate_column",
+          "value": "unknown",
+          "basis": "unknown",
+          "strength": "unknown",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "文档未完整说明全缺失列及退化列的结果。"
+        }
+      ],
+      "specific_constraints": [
+        {
+          "id": "specific_constraints.1",
+          "attribute": "center_or_scale_vector_length",
+          "value": "ncol(x)",
+          "basis": "documented",
+          "strength": "required",
+          "applies_when": [
+            {
+              "target": "center_or_scale_parameter",
+              "operator": "equals",
+              "value": "vector"
+            }
+          ],
+          "evidence_ids": [
+            "E3"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.2",
+          "attribute": "scaling_denominator",
+          "value": "column_sd",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "center",
+              "operator": "equals",
+              "value": true
+            },
+            {
+              "target": "scale",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "evidence_ids": [
+            "E6"
+          ],
+          "reason": null
+        },
+        {
+          "id": "specific_constraints.3",
+          "attribute": "scaling_denominator",
+          "value": "column_rms",
+          "basis": "documented",
+          "strength": "behavior",
+          "applies_when": [
+            {
+              "target": "center",
+              "operator": "equals",
+              "value": false
+            },
+            {
+              "target": "scale",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "evidence_ids": [
+            "E7"
+          ],
+          "reason": null
+        }
+      ]
+    },
+    "task_type": [
+      {
+        "id": "task_type.1",
+        "attribute": "task",
+        "value": "column_centering_scaling",
+        "basis": "documented",
+        "strength": "supported",
+        "applies_when": [],
+        "evidence_ids": [
+          "E1"
+        ],
+        "reason": null
+      }
+    ],
+    "output_summary": [
+      {
+        "value": "transformed_matrix_with_center_scale_attributes",
+        "evidence_ids": [
+          "E8"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "scale",
+        "section": "Description",
+        "locator": "Description",
+        "quote": "centers and/or scales"
+      },
+      {
+        "id": "E2",
+        "source_id": "scale",
+        "section": "Arguments: x",
+        "locator": "Arguments: x",
+        "quote": "numeric matrix"
+      },
+      {
+        "id": "E3",
+        "source_id": "scale",
+        "section": "Arguments: center / scale",
+        "locator": "Arguments: center / scale",
+        "quote": "number of columns"
+      },
+      {
+        "id": "E4",
+        "source_id": "scale",
+        "section": "Details: centering",
+        "locator": "Details: centering",
+        "quote": "omitting"
+      },
+      {
+        "id": "E5",
+        "source_id": "scale",
+        "section": "Details: scaling",
+        "locator": "Details: scaling",
+        "quote": "non-missing values"
+      },
+      {
+        "id": "E6",
+        "source_id": "scale",
+        "section": "Details: scaling",
+        "locator": "Details: scaling",
+        "quote": "standard deviations"
+      },
+      {
+        "id": "E7",
+        "source_id": "scale",
+        "section": "Details: scaling",
+        "locator": "Details: scaling",
+        "quote": "root mean square"
+      },
+      {
+        "id": "E8",
+        "source_id": "scale",
+        "section": "Value",
+        "locator": "Value",
+        "quote": "scaled:center"
+      }
+    ],
+    "inferences": [
+      {
+        "claim_id": "data_modality.1",
+        "reason": "依据矩阵列变换接口映射为表格模态。"
+      }
+    ],
+    "unknown_items": [
+      {
+        "claim_id": "distribution_assumption.1",
+        "reason": "所读文档未明确分布限制，不填any。"
+      },
+      {
+        "claim_id": "dimensionality.2",
+        "reason": "未定义low/high，也未完整规定样本量界限。"
+      },
+      {
+        "claim_id": "missing_data_handling.3",
+        "reason": "文档未完整说明全缺失列及退化列的结果。"
+      }
+    ],
+    "conflicts": [],
+    "review_notes": [
+      "统计量计算忽略NA不等于删除整行或执行缺失值填补。",
+      "仅覆盖文档中的默认方法，不泛化到所有自定义S3方法。"
+    ]
+  },
+  {
+    "schema_version": "0.1.0",
+    "record_id": "utils::read.csv",
+    "package_name": "utils",
+    "function_name": "read.csv",
+    "documented_package_version": "4.5.0",
+    "review_status": "pending_user_review",
+    "profile_target": "function_input_requirements",
+    "document_sources": [
+      {
+        "id": "utils_package",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/utils/html/utils-package.html",
+        "sha256": "b8ba29d9505058f3666fc38ddb2f3a11edcacfe8d1edc5974277247167a83ab7",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:32.342286+00:00",
+        "role": "package_overview"
+      },
+      {
+        "id": "read_csv",
+        "url": "https://stat.ethz.ch/R-manual/R-patched/library/utils/html/read.table.html",
+        "sha256": "6875f8cb89c5d15ed5f21e789b375059fffdd70c7a2d1bbe1b02f4c7ed7712c1",
+        "package_version": "4.5.0",
+        "retrieved_at_utc": "2026-10-18T15:34:49.697680+00:00",
+        "role": "function_reference"
+      }
+    ],
+    "documentation_review": {
+      "package_description": "read",
+      "description": "read",
+      "usage": "read",
+      "arguments": "read",
+      "value": "read",
+      "examples": "read"
+    },
+    "selection": {
+      "keep": false,
+      "reason": "CSV读取包装函数；按本轮规则排除基础文件读写，类型解析不改变其筛选类别。",
+      "rule": "exclude_basic_io",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    "data_profile": {
+      "data_modality": [
+        {
+          "id": "data_modality.1",
+          "attribute": "assessment",
+          "value": "unknown",
+          "basis": "not_assessed",
+          "strength": "not_assessed",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "筛选后排除，不提取适用性画像；不是文档缺失。"
+        }
+      ],
+      "feature_type": [
+        {
+          "id": "feature_type.1",
+          "attribute": "assessment",
+          "value": "unknown",
+          "basis": "not_assessed",
+          "strength": "not_assessed",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "筛选后排除，不提取适用性画像；不是文档缺失。"
+        }
+      ],
+      "distribution_assumption": [
+        {
+          "id": "distribution_assumption.1",
+          "attribute": "assessment",
+          "value": "unknown",
+          "basis": "not_assessed",
+          "strength": "not_assessed",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "筛选后排除，不提取适用性画像；不是文档缺失。"
+        }
+      ],
+      "dimensionality": [
+        {
+          "id": "dimensionality.1",
+          "attribute": "assessment",
+          "value": "unknown",
+          "basis": "not_assessed",
+          "strength": "not_assessed",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "筛选后排除，不提取适用性画像；不是文档缺失。"
+        }
+      ],
+      "missing_data_handling": [
+        {
+          "id": "missing_data_handling.1",
+          "attribute": "assessment",
+          "value": "unknown",
+          "basis": "not_assessed",
+          "strength": "not_assessed",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "筛选后排除，不提取适用性画像；不是文档缺失。"
+        }
+      ],
+      "specific_constraints": [
+        {
+          "id": "specific_constraints.1",
+          "attribute": "assessment",
+          "value": "unknown",
+          "basis": "not_assessed",
+          "strength": "not_assessed",
+          "applies_when": [],
+          "evidence_ids": [],
+          "reason": "筛选后排除，不提取适用性画像；不是文档缺失。"
+        }
+      ]
+    },
+    "task_type": [
+      {
+        "id": "task_type.1",
+        "attribute": "task",
+        "value": "file_input",
+        "basis": "documented",
+        "strength": "supported",
+        "applies_when": [],
+        "evidence_ids": [
+          "E1",
+          "E3"
+        ],
+        "reason": null
+      }
+    ],
+    "output_summary": [
+      {
+        "value": "data_frame",
+        "evidence_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "E1",
+        "source_id": "read_csv",
+        "section": "Details: CSV wrappers",
+        "locator": "Details: CSV wrappers",
+        "quote": "read.csv"
+      },
+      {
+        "id": "E2",
+        "source_id": "read_csv",
+        "section": "Value",
+        "locator": "Value",
+        "quote": "data frame"
+      },
+      {
+        "id": "E3",
+        "source_id": "read_csv",
+        "section": "Usage: read.csv",
+        "locator": "Usage: read.csv",
+        "quote": "sep ="
+      }
+    ],
+    "inferences": [],
+    "unknown_items": [],
+    "conflicts": [],
+    "review_notes": [
+      "仍阅读包说明及函数页全部规定章节。read.csv文档位于read.table共享页。",
+      "排除不代表不能用于系统的数据加载，只是不进入统计函数候选库。"
+    ]
+  }
+]
