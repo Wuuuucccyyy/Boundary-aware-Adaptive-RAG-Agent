@@ -1,0 +1,544 @@
+[
+  {
+    "id": "route-01",
+    "purpose": "要求分别估计方差的配置",
+    "request": {
+      "task": "mean_hypothesis_test",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 7,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      },
+      "candidates": [
+        {
+          "id": "pooled",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": true
+          }
+        },
+        {
+          "id": "welch",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": false
+          }
+        }
+      ],
+      "required_parameters": {},
+      "required_behavior": {
+        "variance_treatment": "separate_with_Welch_df"
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "selected": "welch"
+    }
+  },
+  {
+    "id": "route-02",
+    "purpose": "明确要求合并方差的配置",
+    "request": {
+      "task": "mean_hypothesis_test",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 7,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      },
+      "candidates": [
+        {
+          "id": "pooled",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": true
+          }
+        },
+        {
+          "id": "welch",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": false
+          }
+        }
+      ],
+      "required_parameters": {},
+      "required_behavior": {
+        "variance_treatment": "pooled"
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "selected": "pooled"
+    }
+  },
+  {
+    "id": "route-03",
+    "purpose": "指定配对目标且长度一致",
+    "request": {
+      "task": "mean_hypothesis_test",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 8,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      },
+      "candidates": [
+        {
+          "id": "paired",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": true,
+            "var.equal": false
+          }
+        },
+        {
+          "id": "unpaired",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": false
+          }
+        }
+      ],
+      "required_parameters": {
+        "paired": true
+      },
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "applicable",
+      "selected": "paired"
+    }
+  },
+  {
+    "id": "route-04",
+    "purpose": "配对目标遇到长度冲突不可改为非配对",
+    "request": {
+      "task": "mean_hypothesis_test",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 7,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      },
+      "candidates": [
+        {
+          "id": "paired",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": true,
+            "var.equal": false
+          }
+        },
+        {
+          "id": "unpaired",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": false
+          }
+        }
+      ],
+      "required_parameters": {
+        "paired": true
+      },
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "conflict",
+      "selected": null
+    }
+  },
+  {
+    "id": "route-05",
+    "purpose": "配对目标长度未知需要核实",
+    "request": {
+      "task": "mean_hypothesis_test",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": "unknown",
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      },
+      "candidates": [
+        {
+          "id": "paired",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": true,
+            "var.equal": false
+          }
+        },
+        {
+          "id": "unpaired",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": false
+          }
+        }
+      ],
+      "required_parameters": {
+        "paired": true
+      },
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "unknown",
+      "selected": null
+    }
+  },
+  {
+    "id": "route-06",
+    "purpose": "未知类型不能选任意一个均值检验配置",
+    "request": {
+      "task": "mean_hypothesis_test",
+      "facts": {
+        "x_type": "unknown",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 7,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      },
+      "candidates": [
+        {
+          "id": "pooled",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": true
+          }
+        },
+        {
+          "id": "welch",
+          "function_id": "stats::t.test",
+          "parameters": {
+            "method": "default",
+            "paired": false,
+            "var.equal": false
+          }
+        }
+      ],
+      "required_parameters": {},
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "unknown",
+      "selected": null
+    }
+  },
+  {
+    "id": "route-07",
+    "purpose": "指定SD分母",
+    "request": {
+      "task": "column_centering_scaling",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "all_missing_column": false,
+        "constant_columns": false
+      },
+      "candidates": [
+        {
+          "id": "centered",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": true,
+            "scale": true
+          }
+        },
+        {
+          "id": "uncentered",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": false,
+            "scale": true
+          }
+        }
+      ],
+      "required_parameters": {},
+      "required_behavior": {
+        "scaling_denominator": "column_sd"
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "selected": "centered"
+    }
+  },
+  {
+    "id": "route-08",
+    "purpose": "指定RMS分母",
+    "request": {
+      "task": "column_centering_scaling",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "all_missing_column": false,
+        "constant_columns": false
+      },
+      "candidates": [
+        {
+          "id": "centered",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": true,
+            "scale": true
+          }
+        },
+        {
+          "id": "uncentered",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": false,
+            "scale": true
+          }
+        }
+      ],
+      "required_parameters": {},
+      "required_behavior": {
+        "scaling_denominator": "column_rms"
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "selected": "uncentered"
+    }
+  },
+  {
+    "id": "route-09",
+    "purpose": "相同中心化任务按参数长度选配置",
+    "request": {
+      "task": "column_centering_scaling",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "all_missing_column": false,
+        "constant_columns": false
+      },
+      "candidates": [
+        {
+          "id": "length2",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": [
+              0,
+              0
+            ],
+            "scale": false
+          }
+        },
+        {
+          "id": "length3",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "scale": false
+          }
+        }
+      ],
+      "required_parameters": {},
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "applicable",
+      "selected": "length3"
+    }
+  },
+  {
+    "id": "route-10",
+    "purpose": "列数未知时不猜参数长度",
+    "request": {
+      "task": "column_centering_scaling",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": "unknown",
+        "has_missing": false,
+        "all_missing_column": false,
+        "constant_columns": false
+      },
+      "candidates": [
+        {
+          "id": "length2",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": [
+              0,
+              0
+            ],
+            "scale": false
+          }
+        },
+        {
+          "id": "length3",
+          "function_id": "base::scale",
+          "parameters": {
+            "method": "default",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "scale": false
+          }
+        }
+      ],
+      "required_parameters": {},
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "unknown",
+      "selected": null
+    }
+  },
+  {
+    "id": "route-11",
+    "purpose": "PCA明确不缩放，保留目标",
+    "request": {
+      "task": "principal_component_analysis",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "zero_columns": false,
+        "constant_columns": false
+      },
+      "candidates": [
+        {
+          "id": "scaled",
+          "function_id": "stats::prcomp",
+          "parameters": {
+            "method": "default",
+            "center": true,
+            "scale.": true
+          }
+        },
+        {
+          "id": "unscaled",
+          "function_id": "stats::prcomp",
+          "parameters": {
+            "method": "default",
+            "center": true,
+            "scale.": false
+          }
+        }
+      ],
+      "required_parameters": {
+        "scale.": false
+      },
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "applicable",
+      "selected": "unscaled"
+    }
+  },
+  {
+    "id": "route-12",
+    "purpose": "指定两个中心但不同数据行不足只形成推断风险",
+    "request": {
+      "task": "clustering",
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "numeric_matrix_coercible": true,
+        "distinct_rows": 1,
+        "has_missing": false,
+        "rows_extremely_close": false
+      },
+      "candidates": [
+        {
+          "id": "k1",
+          "function_id": "stats::kmeans",
+          "parameters": {
+            "method": "default",
+            "centers": 1,
+            "algorithm": "Hartigan-Wong"
+          }
+        },
+        {
+          "id": "k2",
+          "function_id": "stats::kmeans",
+          "parameters": {
+            "method": "default",
+            "centers": 2,
+            "algorithm": "Hartigan-Wong"
+          }
+        }
+      ],
+      "required_parameters": {
+        "centers": 2
+      },
+      "required_behavior": {}
+    },
+    "expected": {
+      "state": "unknown",
+      "selected": null
+    }
+  }
+]

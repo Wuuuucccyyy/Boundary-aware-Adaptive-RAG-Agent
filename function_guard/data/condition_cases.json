@@ -1,0 +1,554 @@
+[
+  {
+    "id": "condition-01",
+    "purpose": "未知类型不能通过相等比较变成适用",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "default",
+        "paired": false,
+        "var.equal": false
+      },
+      "facts": {
+        "x_type": "unknown",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 8,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      }
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "feature_type.1": "unknown"
+      }
+    }
+  },
+  {
+    "id": "condition-02",
+    "purpose": "数值属于数值或复数支持集合",
+    "request": {
+      "function_id": "stats::prcomp",
+      "parameters": {
+        "method": "default",
+        "center": true,
+        "scale.": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "zero_columns": false,
+        "constant_columns": false
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "checks": {
+        "feature_type.1": "satisfied"
+      }
+    }
+  },
+  {
+    "id": "condition-03",
+    "purpose": "默认PCA接口明确支持复数",
+    "request": {
+      "function_id": "stats::prcomp",
+      "parameters": {
+        "method": "default",
+        "center": true,
+        "scale.": false
+      },
+      "facts": {
+        "x_type": "complex",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "zero_columns": false,
+        "constant_columns": false
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "checks": {
+        "feature_type.1": "satisfied"
+      }
+    }
+  },
+  {
+    "id": "condition-04",
+    "purpose": "PCA公式接口明确要求数值变量",
+    "request": {
+      "function_id": "stats::prcomp",
+      "parameters": {
+        "method": "formula",
+        "center": true,
+        "scale.": false
+      },
+      "facts": {
+        "x_type": "complex",
+        "x_structure": "data_frame",
+        "ncol": 3,
+        "has_missing": false,
+        "zero_columns": false,
+        "constant_columns": false,
+        "formula_response_present": false
+      }
+    },
+    "expected": {
+      "state": "conflict",
+      "checks": {
+        "feature_type.2": "conflict"
+      }
+    }
+  },
+  {
+    "id": "condition-05",
+    "purpose": "配对输入长度冲突",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "default",
+        "paired": true,
+        "var.equal": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 7,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      }
+    },
+    "expected": {
+      "state": "conflict",
+      "checks": {
+        "specific_constraints.2": "conflict"
+      }
+    }
+  },
+  {
+    "id": "condition-06",
+    "purpose": "配对长度未提供时需要核实",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "default",
+        "paired": true,
+        "var.equal": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      }
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "specific_constraints.2": "unknown"
+      }
+    }
+  },
+  {
+    "id": "condition-07",
+    "purpose": "非配对分支不使用配对长度条件",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "default",
+        "paired": false,
+        "var.equal": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 7,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "checks": {
+        "specific_constraints.2": "inactive"
+      }
+    }
+  },
+  {
+    "id": "condition-08",
+    "purpose": "配对缺失处理是成对删除",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "default",
+        "paired": true,
+        "var.equal": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 8,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": true
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "checks": {
+        "missing_data_handling.2": "informational",
+        "missing_data_handling.1": "inactive"
+      }
+    }
+  },
+  {
+    "id": "condition-09",
+    "purpose": "公式分组为两水平因子",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "formula",
+        "paired": false,
+        "var.equal": false,
+        "rhs": "group_factor"
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 8,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false,
+        "grouping_type": "factor",
+        "grouping_levels": 2
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "checks": {
+        "feature_type.2": "satisfied"
+      }
+    }
+  },
+  {
+    "id": "condition-10",
+    "purpose": "公式分组三水平冲突",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "formula",
+        "paired": false,
+        "var.equal": false,
+        "rhs": "group_factor"
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 8,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false,
+        "grouping_type": "factor",
+        "grouping_levels": 3
+      }
+    },
+    "expected": {
+      "state": "conflict",
+      "checks": {
+        "feature_type.2": "conflict"
+      }
+    }
+  },
+  {
+    "id": "condition-11",
+    "purpose": "缩放参数向量长度正确",
+    "request": {
+      "function_id": "base::scale",
+      "parameters": {
+        "method": "default",
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "scale": true
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "all_missing_column": false,
+        "constant_columns": false
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "checks": {
+        "specific_constraints.1": "satisfied"
+      }
+    }
+  },
+  {
+    "id": "condition-12",
+    "purpose": "缩放参数向量长度冲突",
+    "request": {
+      "function_id": "base::scale",
+      "parameters": {
+        "method": "default",
+        "center": [
+          0,
+          0
+        ],
+        "scale": true
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "all_missing_column": false,
+        "constant_columns": false
+      }
+    },
+    "expected": {
+      "state": "conflict",
+      "checks": {
+        "specific_constraints.1": "conflict"
+      }
+    }
+  },
+  {
+    "id": "condition-13",
+    "purpose": "未中心化时的缩放分母是RMS分支",
+    "request": {
+      "function_id": "base::scale",
+      "parameters": {
+        "method": "default",
+        "center": false,
+        "scale": true
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "all_missing_column": false,
+        "constant_columns": false
+      }
+    },
+    "expected": {
+      "state": "applicable",
+      "checks": {
+        "specific_constraints.2": "inactive",
+        "specific_constraints.3": "informational"
+      }
+    }
+  },
+  {
+    "id": "condition-14",
+    "purpose": "聚类有NA但文档未明确处理",
+    "request": {
+      "function_id": "stats::kmeans",
+      "parameters": {
+        "method": "default",
+        "centers": 2,
+        "algorithm": "Hartigan-Wong"
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "numeric_matrix_coercible": true,
+        "distinct_rows": 5,
+        "has_missing": true,
+        "rows_extremely_close": false
+      }
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "missing_data_handling.1": "unknown"
+      }
+    }
+  },
+  {
+    "id": "condition-15",
+    "purpose": "PCA默认矩阵接口NA策略未知",
+    "request": {
+      "function_id": "stats::prcomp",
+      "parameters": {
+        "method": "default",
+        "center": true,
+        "scale.": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": true,
+        "zero_columns": false,
+        "constant_columns": false
+      }
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "missing_data_handling.2": "unknown"
+      }
+    }
+  },
+  {
+    "id": "condition-16",
+    "purpose": "排除基础读取函数",
+    "request": {
+      "function_id": "utils::read.csv",
+      "parameters": {},
+      "facts": {}
+    },
+    "expected": {
+      "state": "excluded",
+      "checks": {}
+    }
+  },
+  {
+    "id": "condition-17",
+    "purpose": "未绑定paired时不能假设分支不生效",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "default",
+        "paired": "unknown",
+        "var.equal": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 8,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      }
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "specific_constraints.2": "unknown"
+      }
+    }
+  },
+  {
+    "id": "condition-18",
+    "purpose": "推断的不同数据行数量要求不直接硬拒绝",
+    "request": {
+      "function_id": "stats::kmeans",
+      "parameters": {
+        "method": "default",
+        "centers": 2,
+        "algorithm": "Hartigan-Wong"
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "numeric_matrix_coercible": true,
+        "distinct_rows": 1,
+        "has_missing": false,
+        "rows_extremely_close": false
+      }
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "specific_constraints.2": "unknown"
+      }
+    }
+  },
+  {
+    "id": "condition-19",
+    "purpose": "显式询问分布适用性时保留文档未知",
+    "request": {
+      "function_id": "stats::t.test",
+      "parameters": {
+        "method": "default",
+        "paired": false,
+        "var.equal": false
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "vector",
+        "x_length": 8,
+        "y_present": true,
+        "y_type": "numeric",
+        "y_length": 8,
+        "effectively_constant": false,
+        "has_infinite": false,
+        "has_missing": false
+      },
+      "focus_claim_ids": [
+        "distribution_assumption.1"
+      ]
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "distribution_assumption.1": "unknown"
+      }
+    }
+  },
+  {
+    "id": "condition-20",
+    "purpose": "PCA退化列缩放的文档歧义保持待核实",
+    "request": {
+      "function_id": "stats::prcomp",
+      "parameters": {
+        "method": "default",
+        "center": true,
+        "scale.": true
+      },
+      "facts": {
+        "x_type": "numeric",
+        "x_structure": "matrix",
+        "ncol": 3,
+        "has_missing": false,
+        "zero_columns": false,
+        "constant_columns": true
+      }
+    },
+    "expected": {
+      "state": "unknown",
+      "checks": {
+        "specific_constraints.3": "documentation_conflict"
+      }
+    }
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "function_id": "stats::t.test",
+  "parameters": {
+    "method": "default",
+    "paired": true,
+    "var.equal": false
+  },
+  "facts": {
+    "x_type": "numeric",
+    "x_structure": "vector",
+    "x_length": 8,
+    "y_present": true,
+    "y_type": "numeric",
+    "y_length": 7,
+    "effectively_constant": false,
+    "has_infinite": false,
+    "has_missing": false
+  }
+}
