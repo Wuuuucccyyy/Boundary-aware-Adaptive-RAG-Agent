@@ -1,0 +1,1222 @@
+[
+  {
+    "sample_id": "stat-08",
+    "size": 30,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案为随机留出验证，测试集MAE为0.457；因果效应估计证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-08",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案为随机留出验证，测试集MAE为0.457；因果效应估计证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-05",
+    "size": 30,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "summary"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "summary"
+      ],
+      "answer": "证据不足，无法计算总体均值。"
+    }
+  },
+  {
+    "sample_id": "stat-05",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "summary"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "summary"
+      ],
+      "answer": "证据不足，无法计算总体均值。"
+    }
+  },
+  {
+    "sample_id": "stat-08",
+    "size": 20,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案为随机留出验证，测试集MAE为0.457；因果效应估计证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-08",
+    "size": 20,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案已提供，但因果效应估计缺少证据。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 20,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 20,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 20,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 20,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人研究中独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 30,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 20,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 20,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-08",
+    "size": 20,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案为随机留出验证，测试集MAE为0.457；因果效应估计证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-08",
+    "size": 20,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案为随机留出验证，测试集MAE为0.457；因果效应估计证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 30,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-01",
+    "size": 30,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供因果效应估计。"
+    }
+  },
+  {
+    "sample_id": "stat-01",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供因果效应估计。"
+    }
+  },
+  {
+    "sample_id": "stat-03",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法提供中国2026年成年人研究的时间序列验证方案和误差。"
+    }
+  },
+  {
+    "sample_id": "stat-03",
+    "size": 30,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法提供验证方案和误差。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 20,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 20,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-05",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "summary"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "summary"
+      ],
+      "answer": "证据不足，无法计算总体均值。"
+    }
+  },
+  {
+    "sample_id": "stat-05",
+    "size": 30,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "summary"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "summary"
+      ],
+      "answer": "证据不足，无法计算总体均值。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-04",
+    "size": 30,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法确定中国2026年成年人独立同分布数据的验证设计。"
+    }
+  },
+  {
+    "sample_id": "stat-03",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法提供中国2026年成年人时间序列研究的验证方案和误差。"
+    }
+  },
+  {
+    "sample_id": "stat-03",
+    "size": 30,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "validation"
+      ],
+      "answer": "证据不足，无法提供中国2026年成年人时间序列研究的验证方案和误差。"
+    }
+  },
+  {
+    "sample_id": "stat-08",
+    "size": 30,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案已提供，但因果效应估计缺少证据。"
+    }
+  },
+  {
+    "sample_id": "stat-08",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0.5,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "validation",
+          "document_id": "se42e10ee-report",
+          "quote": "合成独立样本采用随机留出验证，测试集MAE为0.457。"
+        }
+      ],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "验证方案为随机留出验证，测试集MAE为0.457；因果效应估计证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-09",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 9,
+      "inappropriate_documents": 9,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation",
+      "missing"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "prediction",
+          "document_id": "s4f3b7321-report",
+          "quote": "冻结合成线性模型在x=25处的预测值为19.315；这是外推示例，不是因果效应。"
+        },
+        {
+          "requirement_id": "diagnostics",
+          "document_id": "sd3fafbd4-report",
+          "quote": "合成线性模型训练残差平均绝对值为0.366；该描述不能独自证明误差独立或模型正确。"
+        }
+      ],
+      "unknown": [
+        "validation",
+        "missing"
+      ],
+      "answer": "已提供预测结果和残差诊断；时间序列验证方案和MAR缺失处理证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-09",
+    "size": 30,
+    "method": "positive",
+    "repetition": 1,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 9,
+      "inappropriate_documents": 9,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation",
+      "missing"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "prediction",
+          "document_id": "s4f3b7321-report",
+          "quote": "冻结合成线性模型在x=25处的预测值为19.315；这是外推示例，不是因果效应。"
+        },
+        {
+          "requirement_id": "diagnostics",
+          "document_id": "sd3fafbd4-report",
+          "quote": "合成线性模型训练残差平均绝对值为0.366；该描述不能独自证明误差独立或模型正确。"
+        }
+      ],
+      "unknown": [
+        "validation",
+        "missing"
+      ],
+      "answer": "已提供预测结果和残差诊断；时间序列验证方案和MAR缺失处理证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-02",
+    "size": 30,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供关联估计。"
+    }
+  },
+  {
+    "sample_id": "stat-09",
+    "size": 30,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 9,
+      "inappropriate_documents": 9,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation",
+      "missing"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "prediction",
+          "document_id": "s4f3b7321-report",
+          "quote": "冻结合成线性模型在x=25处的预测值为19.315；这是外推示例，不是因果效应。"
+        },
+        {
+          "requirement_id": "diagnostics",
+          "document_id": "sd3fafbd4-report",
+          "quote": "合成线性模型训练残差平均绝对值为0.366；该描述不能独自证明误差独立或模型正确。"
+        }
+      ],
+      "unknown": [
+        "validation",
+        "missing"
+      ],
+      "answer": "已提供预测结果和残差诊断；时间序列验证方案和MAR缺失处理证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-09",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0.5,
+      "exact_task_success": false,
+      "source_recall": 0.5,
+      "initial_source_recall": 0,
+      "evidence_recall": 0.5,
+      "claim_precision": 1.0,
+      "unnecessary_calls": 9,
+      "inappropriate_documents": 9,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "validation",
+      "missing"
+    ],
+    "output": {
+      "claims": [
+        {
+          "requirement_id": "prediction",
+          "document_id": "s4f3b7321-report",
+          "quote": "冻结合成线性模型在x=25处的预测值为19.315；这是外推示例，不是因果效应。"
+        },
+        {
+          "requirement_id": "diagnostics",
+          "document_id": "sd3fafbd4-report",
+          "quote": "合成线性模型训练残差平均绝对值为0.366；该描述不能独自证明误差独立或模型正确。"
+        }
+      ],
+      "unknown": [
+        "validation",
+        "missing"
+      ],
+      "answer": "已提供预测结果和残差诊断；时间序列验证方案和MAR缺失处理证据不足。"
+    }
+  },
+  {
+    "sample_id": "stat-01",
+    "size": 30,
+    "method": "no_negative",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供因果效应估计。"
+    }
+  },
+  {
+    "sample_id": "stat-01",
+    "size": 30,
+    "method": "positive",
+    "repetition": 0,
+    "scores": {
+      "evidence_answer_score": 0,
+      "exact_task_success": false,
+      "source_recall": 0,
+      "initial_source_recall": 0,
+      "evidence_recall": 0,
+      "claim_precision": null,
+      "unnecessary_calls": 3,
+      "inappropriate_documents": 3,
+      "generation_success": true
+    },
+    "error": null,
+    "missing": [
+      "effect"
+    ],
+    "output": {
+      "claims": [],
+      "unknown": [
+        "effect"
+      ],
+      "answer": "证据不足，无法提供因果效应估计。"
+    }
+  }
+]

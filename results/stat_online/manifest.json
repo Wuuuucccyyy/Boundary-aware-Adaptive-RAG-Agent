@@ -1,0 +1,49 @@
+{
+  "identity": {
+    "backend": "deepseek",
+    "model": "deepseek-v4-pro",
+    "split": "test",
+    "repeats": 2,
+    "sizes": [
+      10,
+      20,
+      30
+    ],
+    "methods": [
+      "all",
+      "positive",
+      "fixed",
+      "full_profile",
+      "dynamic",
+      "no_negative"
+    ],
+    "code_sha256": "56c69c53cd77921120d3a6d7fe02bbcd2dc7a3758bf2698ae450418bfa74c544",
+    "corpus_sha256": {
+      "10": "e96040953a58e22a802bfac2304b3cd7f4de97880c7a52058e0e7dfa063ac297",
+      "20": "dd28271bc710c86693519adf53e7f00a20f6e88b03926e6898689d8d218b0ad3",
+      "30": "113189e4132f17ecb7ac631349de92750aad7bf6c1832b83ea220b88ee80b70c"
+    },
+    "benchmark_sha256": "cae0ba53fcf0fa823c941171755acdaaba29d59a5c908571e0dc95ccd69e40ae",
+    "settings": {
+      "max_rounds": 3,
+      "max_retrieval_calls": 30,
+      "top_k": 1,
+      "max_output_tokens": 700,
+      "max_api_tokens": 12000,
+      "max_seconds": 60,
+      "max_processing_proxy": 150000,
+      "risk_weight": 0.85,
+      "unknown_weight": 0.2
+    },
+    "seed": 817,
+    "temperature": 0,
+    "thinking": "disabled",
+    "concurrency": 1
+  },
+  "started_utc": "2026-10-18T03:55:24.861644+00:00",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "completed_utc": "2026-10-18T04:06:39.530645+00:00",
+  "records": 432,
+  "failures": 40
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "size": 10,
+    "baseline": "positive",
+    "paired_runs": 24,
+    "first_round_changed": 16,
+    "total_source_set_changed": 16
+  },
+  {
+    "size": 10,
+    "baseline": "fixed",
+    "paired_runs": 24,
+    "first_round_changed": 2,
+    "total_source_set_changed": 2
+  },
+  {
+    "size": 10,
+    "baseline": "full_profile",
+    "paired_runs": 24,
+    "first_round_changed": 4,
+    "total_source_set_changed": 4
+  },
+  {
+    "size": 10,
+    "baseline": "no_negative",
+    "paired_runs": 24,
+    "first_round_changed": 16,
+    "total_source_set_changed": 16
+  },
+  {
+    "size": 20,
+    "baseline": "positive",
+    "paired_runs": 24,
+    "first_round_changed": 22,
+    "total_source_set_changed": 22
+  },
+  {
+    "size": 20,
+    "baseline": "fixed",
+    "paired_runs": 24,
+    "first_round_changed": 18,
+    "total_source_set_changed": 18
+  },
+  {
+    "size": 20,
+    "baseline": "full_profile",
+    "paired_runs": 24,
+    "first_round_changed": 4,
+    "total_source_set_changed": 6
+  },
+  {
+    "size": 20,
+    "baseline": "no_negative",
+    "paired_runs": 24,
+    "first_round_changed": 22,
+    "total_source_set_changed": 22
+  },
+  {
+    "size": 30,
+    "baseline": "positive",
+    "paired_runs": 24,
+    "first_round_changed": 22,
+    "total_source_set_changed": 22
+  },
+  {
+    "size": 30,
+    "baseline": "fixed",
+    "paired_runs": 24,
+    "first_round_changed": 22,
+    "total_source_set_changed": 22
+  },
+  {
+    "size": 30,
+    "baseline": "full_profile",
+    "paired_runs": 24,
+    "first_round_changed": 4,
+    "total_source_set_changed": 6
+  },
+  {
+    "size": 30,
+    "baseline": "no_negative",
+    "paired_runs": 24,
+    "first_round_changed": 22,
+    "total_source_set_changed": 22
+  }
+]
